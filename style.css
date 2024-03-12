@@ -54,11 +54,8 @@ header {
 
  /* links section */
 
-.navigation a { 
+.navigation a{
   cursor: pointer; 
-}
- 
-a{
   text-decoration: none;
   color:var(--text);
   letter-spacing: 0.1em;
@@ -94,6 +91,16 @@ nav a:hover{
   transform: translate(-60%); /* Adjust horizontally to center properly */
   width: 50vw;
   height: 70vh;
+  animation: rotateCrane 1s  ;
+}
+
+@keyframes rotateCrane {
+  0% {
+    transform: translate(-60%) rotateY(-30deg); /* Initial position and no flip */
+}
+100% {
+    transform: translate(-60%) rotateY(0deg); /* Final position and horizontal flip */
+}
 }
 
 .svg-icon {
@@ -103,6 +110,18 @@ nav a:hover{
   z-index: 1;
 }
 
+.top {
+    position: absolute;
+    width: 110%; /* Initially, set width to 0 */
+    height: auto;
+    z-index: 1;
+    transition: 0.5s; /* Animation duration and easing function */
+     /* 1-second delay before the animation starts */
+}
+
+
+
+
 .svg-sun {
   position: absolute;
   left: 15vw;
@@ -111,31 +130,37 @@ nav a:hover{
   height: 20vh;
   width: auto;
   transform: translate(-60%);
+  
 }
 
 .hero-logo{
   position: absolute;
-  left: 15%;
-  top: 16%;
+  left: -47%;
+  top: 18%;
   width: 60%;
   height:auto;
   z-index: 2;
+  transition: left 0.5s ; /* Animation duration and easing function */
+  
 }
+
+
 
 /* Styles for Quote */ 
 
 .quote-button {
   background-color:var(--background);
   position: absolute; /* Fixed positioning for centering */
-  top: 39.6%; /* Adjusted to place 300px down from the top */
-  left: 58.5%;
-  transform: translate(-10%, 20%);
+  top: 43%; /* Adjusted to place 300px down from the top */
+  left: 61%;
+  
   padding: 1% 2%;
   margin: 0; /* Remove margins */
   border:none;
   border-left: 5px solid var(--active-nav-link);
   cursor: pointer;
   z-index: 1;
+  
 }
 
 .quote-button:focus { 
@@ -240,7 +265,7 @@ nav a:hover{
     width: auto;
     height: auto;
     top: 168px;
-    margin-left: 10px;
+    margin-left: 2px;
     gap: 8px;
     font-family: var(--oswald-font);
     color:var(--background);
@@ -257,8 +282,8 @@ nav a:hover{
 .about-button {
   width: auto;
   height: auto;    
-  left: 60px;
-  padding: 5px 40px;
+  left: 70px;
+  padding: 15px 40px;
   border: 0;
   border-left: 6px solid var(--button-border-dark);
   gap: 10px;
@@ -276,6 +301,9 @@ nav a:hover{
   top: 250px;
   z-index: 1;
 }
+
+
+
 
 /*Project Section*/
 
@@ -417,6 +445,7 @@ nav a:hover{
 #testmonial-section {
   display: flex;
   justify-content: center;
+  
   position: relative;
   top: -220px;
   z-index: 1; /* Ensure the testimonial section is above other elements */
@@ -435,12 +464,13 @@ nav a:hover{
 }
 
 .rounded-box {
-  width: 98%;
+  width: 97%;
   height: 828px;
   background: var(--article-hover-border);
   border-radius: 50px;
   position: relative;
-  gap: 0;
+  left: 2%;
+  right: 2%;
   z-index: 1; /* Ensure the testimonial box is above other elements */
 }
 
@@ -593,7 +623,7 @@ text-transform: uppercase;
 #contact {
   height: 50vh;
   width: 100%;
-  margin-bottom: 50px; 
+  margin-bottom:7vh; 
 }
 
 .contact-text-container
@@ -626,11 +656,12 @@ text-align: left;
 .contact-container{
   position: relative;
   display: flex;
-  top: 6.5vh; ;
+  top: 7vh; ;
   align-items: center;
   width: 100%;
   height: 100%;
   justify-content: center;
+  left:5%
   
 }
 
@@ -671,6 +702,7 @@ hr {
    justify-content:space-around;
    width: 100%;
    height: auto;
+   padding: 30px 0 ;
 }
 
 #copyright{
@@ -688,7 +720,7 @@ hr {
   gap: 20px;
   width: 8px;
   height: 8px;
-  color: #1F1F1F;
+  
 }
 
 footer svg {
@@ -701,6 +733,19 @@ footer {
   width: 100%;
   background-color:var(--hero-background);
   color:var(--footer-text);
-  font-family: var(--oswald-font);
+  font-family: var(--opensans-font);
+  
+}
 
+#footer-link{
+  display:block;
+  letter-spacing:normal;
+  line-break: normal;
+  margin-top: 20px; 
+  font-size: 15px;
+  color: var(--footer-text);
+  text-decoration: none;
+}
+#footer-link:hover{
+color: var(--active-nav-link);
 }

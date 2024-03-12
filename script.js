@@ -35,7 +35,7 @@ function setupImageGallery(totalImages, largeImageClass, smallImageClass) {
 
   // Function to start automatic sliding
   function startSlideInterval() {
-    slideInterval = setInterval(goToNextImage, 4000);
+    slideInterval = setInterval(goToNextImage, 3000);
   }
 
   // Function to stop automatic sliding
@@ -62,3 +62,52 @@ function setupImageGallery(totalImages, largeImageClass, smallImageClass) {
 
 // Call the function with parameters
 setupImageGallery(19, '.large-image', '.small-image');
+
+/*==================== ANImaTION ====================*/
+
+
+//hero logo
+window.addEventListener('load', function() {
+  var heroLogo = document.querySelector('.hero-logo');
+  heroLogo.style.left = '15%'; // Move the logo to its final position using JavaScript
+   // Add transition to the left property
+  window.addEventListener('scroll', function() {
+      var logoRect = heroLogo.getBoundingClientRect();
+      var viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+
+      if (logoRect.top + logoRect.height < 0) { // If the logo leaves the viewport from the top
+          heroLogo.style.left = '-200px'; // Move the logo completely out of the viewport
+      } else {
+          heroLogo.style.left = 'calc(15% - ' + window.pageYOffset + 'px)'; // Move the logo towards the left based on scroll position
+          heroLogo.style.transition = 'left 0s';
+        }
+  });
+});
+//svg icon
+document.addEventListener('DOMContentLoaded', function() {
+    // Zoom in animation when the page loads
+    var topElement = document.querySelector('.top');
+    var svgicon=document.querySelector('.svg-icon');
+    topElement.style.width = '100%';
+
+    // Zoom out animation based on scroll
+    window.addEventListener('scroll', function() {
+        var scrollTop = window.scrollY || document.documentElement.scrollTop;
+        var maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+        var scrollPercent = (scrollTop / maxScroll) * 100;
+
+        // Calculate the width based on scroll position
+        var newWidth = 100 + scrollPercent;
+        if (newWidth < 0) {
+            newWidth = 0;
+            topElement.style.width = newWidth  + '%';
+        }
+
+        // Apply the new width to the element
+        topElement.style.width = newWidth  + '%';
+        svgicon.style.width = newWidth  + '%';
+        topElement.style.transition = 'left 0s';
+    });
+});
+
+//phone
