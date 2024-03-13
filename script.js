@@ -66,7 +66,7 @@ setupImageGallery(19, '.large-image', '.small-image');
 /*==================== ANImaTION ====================*/
 
 
-//hero logo
+//hero logo,testmonial-heading
 window.addEventListener('load', function() {
   var heroLogo = document.querySelector('.hero-logo');
   heroLogo.style.left = '15%'; // Move the logo to its final position using JavaScript

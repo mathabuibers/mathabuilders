@@ -1,4 +1,4 @@
-:root {
+  :root {
   --background:#ffffff;
   --hero-background:#DCE0E6;
   --active-nav-link:#B31F22;
@@ -94,14 +94,7 @@ nav a:hover{
   animation: rotateCrane 1s  ;
 }
 
-@keyframes rotateCrane {
-  0% {
-    transform: translate(-60%) rotateY(-30deg); /* Initial position and no flip */
-}
-100% {
-    transform: translate(-60%) rotateY(0deg); /* Final position and horizontal flip */
-}
-}
+
 
 .svg-icon {
   position: absolute;
@@ -178,10 +171,15 @@ nav a:hover{
     outline: 19px solid var(--button-border-dark);
     border-radius: 26px; /* Border radius in percentage */
      /* Border thickness in viewport units */
-     background: linear-gradient(180deg, var(--button-background) 64.12%,var(--button-border-dark) 116.17%);/* Border radius in percentage */
+    
     position: relative;
     margin: 0 auto; /* Center the element horizontally */
+    animation: zoomphone 1s forwards;
+    animation-timeline: view();
+    animation-range-start: 0px ;
+    animation-range-end: 500px;
 }   
+
 
 .screen {
     width: 100%;
@@ -237,8 +235,9 @@ nav a:hover{
   margin: 0;
   font-size:32px;
   font-weight: bold;
-
 }
+
+  
 
 .horizontal-line::before {
     content: "";
@@ -259,6 +258,7 @@ nav a:hover{
     font-size: 15.87px;
     margin: 0;
     margin-left: 10px;
+    
 }
 
 .about-p {
@@ -269,6 +269,7 @@ nav a:hover{
     gap: 8px;
     font-family: var(--oswald-font);
     color:var(--background);
+  
 }
 
 .about-build {
@@ -276,7 +277,8 @@ nav a:hover{
     position: absolute;
     width:93% ;
     height: auto;
-    left: -1px;   
+    left: -1px;
+       
 }
 
 .about-button {
@@ -322,8 +324,11 @@ nav a:hover{
   align-items: end;
   padding: 0 20px;
   justify-content: right;
-  z-index: 1;
+  z-index: 999;
+  
+ 
 }
+
 
 .project-header {
   display: flex;
@@ -335,7 +340,11 @@ nav a:hover{
   text-transform: uppercase;
   letter-spacing: 4.48px;
   line-height: 119%;
+  animation: righttoleft 1s forwards;
+  animation-timeline: view();
+  animation-range: 0px 800px;
 }
+
 
 .projects-title {
   font-family: var(--opensans-font);
@@ -355,11 +364,18 @@ nav a:hover{
   text-transform: uppercase;
   margin-top: 28px;
   font: 700 45px/119% var(--oswald-font);
+  animation: righttoleft 1s forwards;
+  animation-timeline: view();
+  animation-range: 0px 600px;
 }
 
 .work-gallery {
   align-self: stretch;
   margin-top: 44px;
+  transform-origin: right;
+  animation: expand 1s forwards;
+  animation-timeline: view();
+  animation-range: 0px 1000px;
 }
 
 .image-row {
@@ -448,7 +464,7 @@ nav a:hover{
   
   position: relative;
   top: -220px;
-  z-index: 1; /* Ensure the testimonial section is above other elements */
+  z-index: -1; /* Ensure the testimonial section is above other elements */
 }
 
 .testimonial-container {
@@ -476,9 +492,16 @@ nav a:hover{
 
 .testimonial-client {
   text-align: left;
+  animation: ltor 1s forwards;
+  animation-timeline: view();
+  animation-range-start: 0px;
+  animation-range-end: 500px;
 }
+
+
 .testimonial-container .horizontal-line::before{
   left: 0;
+  animation: ltor 1s forwards;
 }
 .testimonial-client p{
   color: #FFF;
@@ -525,48 +548,66 @@ text-transform: uppercase;
 
 /* Article Section*/
 
-.articles{
+.articles {
   display: flex;
   justify-content: center;
-  gap: 20%;
-  flex-wrap: wrap-reverse;
+  gap: 20%; /* Adjust the gap between articles */
+  flex-wrap: wrap-reverse; /* Reverse the wrapping direction */
 }
 
 .article-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
- }
-
- /* Article Box Section */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width:45em;
+  
+}
 
 .box {
-  background-color:var(--indicator); 
-  padding: 20px;
-  width: 23vw;
-  height: 23vw;
-  max-width: 200px; 
-  max-height: 200px;
-  flex-shrink: 0;
+  width: 14.5em;
+  height: 14.5em;
+  background-color: var(--indicator);
+  margin: 10px; /* Position relative for absolute positioning */
 }
 
 .box:nth-child(1) {
   border-top-left-radius: 50px;
+  transform-origin: right;
+    animation: smallbox 1s forwards;
+     animation-timeline: view();
+  animation-range: 0 400px;/* Apply animation to the first box */
+  /* animation-timeline: view();
+  animation-range-start: 0px 20px; */
 }
+
+
 
 .box:nth-child(2) {
   border-top-right-radius: 50px;
+  transform-origin: left;
+    animation: smallbox 1s forwards;
+     animation-timeline: view();
+  animation-range: 0 400px; 
+  
 }
 
 .box:nth-child(3) {
   border-bottom-left-radius: 50px;
-}
+  transform-origin: left;
+  animation: smallbox 1s forwards;
+   animation-timeline: view();
+animation-range: 0 400px; }
 
 .box:nth-child(4) {
   border-bottom-right-radius: 50px;
   box-shadow: 
-    5px 5px 0px 0px var(--article-hover-border), /* Right shadow */
-    5px 5px 0px 0px var(--article-hover-border) ;
+  5px 5px 0px 0px var(--article-hover-border), /* Right shadow */
+  5px 5px 0px 0px var(--article-hover-border) ;
+transform-origin: right;
+    animation: smallbox 1s forwards;
+     animation-timeline: view();
+  animation-range: 0 400px;
+    
 }
 
 
@@ -596,6 +637,12 @@ text-transform: uppercase;
   position: relative;
   
 }
+
+.article-text-container {
+  animation: righttoleft 1s forwards;
+  animation-timeline: view();
+    animation-range: 0px 800px;
+}
 .article-text{
   font-size: 40px;
   text-transform: uppercase;
@@ -614,17 +661,30 @@ text-transform: uppercase;
   border-right: 10px solid var(--article-hover-border);
   position: absolute;
   right: 0;
+  transform-origin: left;
+  animation: expand 1s forwards;
+  animation-timeline: view();
+    animation-range: 0px 800px;
   
 }
 
 
 /* Contact section */
 
+
 #contact {
   height: 50vh;
   width: 100%;
-  margin-bottom:7vh; 
+  margin-bottom:12vh;
+  position: relative;
+  top: 50px;
+
 }
+
+@media screen and (max-width: 768px) {
+  
+}
+
 
 .contact-text-container
 {
@@ -668,7 +728,7 @@ text-align: left;
 .contact-button{
   width:181.31px;
   height: 64.66px;
-  padding: 21.83px, 43.66px, 21.83px, 43.66px;
+
   background:var(--button-background);
   gap: 8.73px;
   border-left: 5.24px solid var(--article-hover-border);
@@ -688,6 +748,7 @@ text-align: left;
 
 
 hr {
+  
   width: 100%;
   height: 2px; 
   background-color:var(--text);
@@ -703,6 +764,7 @@ hr {
    width: 100%;
    height: auto;
    padding: 30px 0 ;
+   position: relative;
 }
 
 #copyright{
@@ -745,7 +807,78 @@ footer {
   font-size: 15px;
   color: var(--footer-text);
   text-decoration: none;
+  
 }
 #footer-link:hover{
 color: var(--active-nav-link);
+}
+
+.icons{
+  color: var(--text);
+}
+
+/*==================Animation==================*/
+
+@keyframes zoomphone {
+  0% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes righttoleft{
+  from{
+    transform: translateX(110%);
+  }
+  to{
+    transform: translateX(0);
+  }
+}
+
+@keyframes ltor {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes expand {
+  from {
+    transform: scaleX(0) scaleY(1);
+  }
+  to {
+    transform: scaleX(1) scaleY(1);
+  }
+}
+
+@keyframes rotateCrane {
+  0% {
+    transform: translate(-60%) rotateY(-30deg); /* Initial position and no flip */
+}
+100% {
+    transform: translate(-60%) rotateY(0deg); /* Final position and horizontal flip */
+}
+}
+
+@keyframes bigbox {
+  from {
+    transform: scaleX(1.5) scaleY(1.5);
+  }
+  to {
+    transform: scaleX(1) scaleY(1);
+  }
+}
+
+@keyframes smallbox {
+  from {
+    transform: scaleX(0.5) scaleY(0.5);
+  }
+  to {
+    transform: scaleX(1) scaleY(1);    
+}
+
 }
