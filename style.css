@@ -553,25 +553,51 @@ text-transform: uppercase;
   justify-content: center;
   gap: 20%; /* Adjust the gap between articles */
   flex-wrap: wrap-reverse; /* Reverse the wrapping direction */
+  position: relative;
 }
 
 .article-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width:45em;
-  
+  width: 45em;
+  position: absolute; /* Set position relative for stacking */
 }
+
 
 .box {
   width: 14.5em;
   height: 14.5em;
   background-color: var(--indicator);
   margin: 10px; /* Position relative for absolute positioning */
+  position: relative; /* Set position relative for stacking */
 }
 
+.bg{
+
+  background-color: blue;
+  width: 16em;
+  
+
+}
+
+/* Rest of your CSS rules */
+
+.box1:hover ~ .box4,
+.box2:hover ~ .box4,
+.box3:hover ~ .box4 {
+  box-shadow: none;
+}
+
+#box1:hover{
+  border-top-left-radius: 100px;
+  box-shadow: 
+    -10px -10px 0px 0px var(--article-hover-border), /* Top shadow */
+    -10px -10px 0px 0px var(--article-hover-border); /* Left shadow */
+
+}
 .box:nth-child(1) {
-  border-top-left-radius: 50px;
+  border-top-left-radius: 100px;
   transform-origin: right;
     animation: smallbox 1s forwards;
      animation-timeline: view();
@@ -583,34 +609,58 @@ text-transform: uppercase;
 
 
 .box:nth-child(2) {
-  border-top-right-radius: 50px;
+  border-top-right-radius: 100px;
   transform-origin: left;
     animation: smallbox 1s forwards;
      animation-timeline: view();
   animation-range: 0 400px; 
   
 }
+.box:nth-child(2):hover{
+  border-top-right-radius: 100px;
+  box-shadow: 
+  10px -10px 0px 0px var(--article-hover-border), /* Top shadow */
+  10px -10px 0px 0px var(--article-hover-border); /* Right shadow */
 
+}
 .box:nth-child(3) {
-  border-bottom-left-radius: 50px;
+  border-bottom-left-radius: 100px;
   transform-origin: left;
   animation: smallbox 1s forwards;
    animation-timeline: view();
-animation-range: 0 400px; }
+animation-range: 0 400px;
+ }
+
+ .box:nth-child(3):hover {
+  border-bottom-left-radius: 100px;
+  box-shadow: 
+    -10px 10px 0px 0px var(--article-hover-border), /* Left shadow */
+    -10px 10px 0px 0px var(--article-hover-border); /* Bottom shadow */
+
+}
 
 .box:nth-child(4) {
-  border-bottom-right-radius: 50px;
+  border-bottom-right-radius: 100px;
   box-shadow: 
-  5px 5px 0px 0px var(--article-hover-border), /* Right shadow */
-  5px 5px 0px 0px var(--article-hover-border) ;
-transform-origin: right;
-    animation: smallbox 1s forwards;
-     animation-timeline: view();
+  10px 10px 0px 0px var(--article-hover-border), /* Right shadow */
+  10px 10px 0px 0px var(--article-hover-border) ; /* Bottom shadow */
+  transform-origin: right;
+  animation: smallbox 1s forwards;
+  animation-timeline: view();
   animation-range: 0 400px;
     
 }
+.box:nth-child(4):hover {
+  border-bottom-right-radius: 100px;
+  box-shadow: 
+    10px 10px 0px 0px var(--article-hover-border), /* Right shadow */
+    10px 10px 0px 0px var(--article-hover-border) ; /* Bottom shadow */
+}
 
-
+.box-b{
+  position :absolute;
+  z-index: -2;
+}
 /* Article Text container */
 
 .article-top-text{
@@ -673,17 +723,10 @@ transform-origin: right;
 
 
 #contact {
-  height: 50vh;
+  height: 60vh;
   width: 100%;
-  margin-bottom:12vh;
-  position: relative;
-  top: 50px;
-
 }
 
-@media screen and (max-width: 768px) {
-  
-}
 
 
 .contact-text-container
@@ -691,10 +734,13 @@ transform-origin: right;
  position: relative;
   top: 70px;
   left: -250px;
-  gap: 34.92px;
+  
+  
 }
 .light-crane{
   z-index: -1;
+  position: relative; 
+  
 }
 .contact-text-container p{
 
@@ -716,19 +762,18 @@ text-align: left;
 .contact-container{
   position: relative;
   display: flex;
-  top: 7vh; ;
-  align-items: center;
+  align-items:center;
   width: 100%;
   height: 100%;
   justify-content: center;
-  left:5%
+  bottom: -9%;
+  
   
 }
 
 .contact-button{
-  width:181.31px;
-  height: 64.66px;
-
+  width:180.31px;
+  height: 64px;
   background:var(--button-background);
   gap: 8.73px;
   border-left: 5.24px solid var(--article-hover-border);
@@ -745,6 +790,54 @@ text-align: left;
 
 
 /* Footer section*/
+footer {
+  width: 100%;
+  background-color:var(--hero-background);
+  color:var(--footer-text);
+  font-family: var(--opensans-font);
+ 
+}
+
+@media screen and (max-width: 1600px) {
+  footer{
+    position: relative;
+    top: 106px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  footer{
+    position: relative;
+    top: 60px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  
+  footer{
+    position: relative;
+    top:90px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  footer{
+    position: relative;
+    top: 80px;
+  }
+}
+@media screen and (max-width: 1150px) {
+  footer{
+    position: relative;
+    top: 90px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  footer{
+    position: relative;
+    top: 107px;
+  }
+}
+
+
 
 
 hr {
@@ -765,6 +858,7 @@ hr {
    height: auto;
    padding: 30px 0 ;
    position: relative;
+   
 }
 
 #copyright{
@@ -789,14 +883,6 @@ footer svg {
   width: 20%;
   height: 10%;
   padding:1.5em ;  
-}
-
-footer {
-  width: 100%;
-  background-color:var(--hero-background);
-  color:var(--footer-text);
-  font-family: var(--opensans-font);
-  
 }
 
 #footer-link{
