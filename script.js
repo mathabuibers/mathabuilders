@@ -69,18 +69,27 @@ setupImageGallery(19, '.large-image', '.small-image');
 //hero logo,testmonial-heading
 window.addEventListener('load', function() {
   var heroLogo = document.querySelector('.hero-logo');
-  heroLogo.style.left = '15%'; // Move the logo to its final position using JavaScript
-   // Add transition to the left property
+  var isMobile = window.matchMedia('(max-width: 767px)').matches; // Check if the device is mobile
+  
+  if (isMobile) {
+    heroLogo.style.left = '10%'; // Set the left value to 105px for mobile devices
+  } else {
+    heroLogo.style.left = '15%'; // Set the left value to 15% for other devices
+  }
   window.addEventListener('scroll', function() {
-      var logoRect = heroLogo.getBoundingClientRect();
-      var viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+    var logoRect = heroLogo.getBoundingClientRect();
+    var viewportHeight = window.innerHeight || document.documentElement.clientHeight;
 
-      if (logoRect.top + logoRect.height < 0) { // If the logo leaves the viewport from the top
-          heroLogo.style.left = '-200px'; // Move the logo completely out of the viewport
+    if (logoRect.top + logoRect.height < 0) { // If the logo leaves the viewport from the top
+      heroLogo.style.left = '-200px'; // Move the logo completely out of the viewport
+    } else {
+      if (isMobile) {
+        heroLogo.style.left = '10%'; // Set the left value to 105px for mobile devices
       } else {
-          heroLogo.style.left = 'calc(15% - ' + window.pageYOffset + 'px)'; // Move the logo towards the left based on scroll position
-          heroLogo.style.transition = 'left 0s';
-        }
+        heroLogo.style.left = 'calc(15% - ' + window.pageYOffset + 'px)'; // Move the logo towards the left based on scroll position
+        heroLogo.style.transition = 'left 0s'; // Add transition to the left property
+      }
+    }
   });
 });
 //svg icon

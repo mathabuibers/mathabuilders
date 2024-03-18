@@ -20,7 +20,7 @@
   body {
     font-family: var(--oswald-font);
     margin: 0;
-  
+    overflow-x:hidden;
     
   }
 
@@ -700,7 +700,7 @@
   position: relative; /* Add relative positioning */
 }
 
-.box:nth-child(4)::after {
+.box:nth-child(4):hover::after {
   content: '';
   position: absolute; /* Use absolute positioning */
   bottom: -20px; /* Adjust to match the border width */
@@ -826,7 +826,17 @@
     letter-spacing: 0.12em;
 
   }
+  @keyframes scalePath {
+    0% { transform: scaley(1.5); }
+    
+    100% { transform: scaley(1); }
+  }
 
+  /* Apply animation to the path */
+  #animatedPath {
+    animation: scalePath 2s  ;
+    
+  }
 
   /* Footer section*/
   footer {
@@ -910,6 +920,7 @@
   
   justify-content: center;
   width: auto;
+  
   
 }
   #copyright {
@@ -1077,4 +1088,118 @@
   }
 
 
+  @media screen and (max-width: 430px) {
+   .navigation{
+     display: none;
+   }
+    .svg-container {
+    height: 40vh;
+  }
+
+  .crane{
+    width: 100vw;
+    height: 80vh;
+    top: -20vh;
+    left: 98%;
+  }
+  .hero-logo{
+    top: 25%;
+    width: 75%;
+    left:10%;
+  }
+  .semicircle{
+    height: 27%;
+    position: absolute;
+  }
+  .about-h1{
+    font-size: 1.3rem;
+  }
+  .about-p {
+    font-size:10px;
+  }
+  .about-header{
+   
+  margin-left: 0;
+  padding-left: 20px;
+  width: 58ch;
+  }
+  .screen .horizontal-line::before{
+    top: 30px;
+    left: 20px;
+  }
+  #about{
+    margin-top: 20px;
+    padding-left: 50px;
+    font-size: 0.8rem;
+  }
+  .phone{
+    outline: 0;
+    top: 0;
+    
+  }
+  .notch{
+    display: none;
+  }
+  .screen{
+    background: transparent;
+    margin-top: 40px;
+   
+    
+  }
+ .about-build{
+   display: none;
+ }
+ .small-image-container{
+  display: none;
+ }
+ 
+ .image-row{
+   justify-content: center;
+   transform: translateX(-4%);
+ }
+ .testimonial-client h1{
+   margin-left: 20px;
+   font-size: 1.5rem;
+ }
+  .testimonial-client p{
+    font-size: 0.8rem;
+  }
+  .testimonial-client .horizontal-line::before{
+    
+    left: 30px;
+  }
+  #slide1,#slide3{
+    display: none;
+  }
+  #slid2,.slide2{
+    width: 65%;
+    height:auto;
+  }
+  .rounded-box{
+    
+    height: 500px;
+  }
+  #project-button{
+    top: 160px;
+    width: 150px;
+    height: 50px;
+    font-size: 10px;
+    clear: both;
+    right: 120px;
+  }
+  .testimonial-container{
+    top: 66.6%;
+  }
+ .hidden{
+   display: none;
+ }
+ .list1,.list2,.list3
+ {display: flex;
+  justify-content: center;}
+
+  .footer-list-container{
+
+    flex-wrap: wrap ;
+  }
+}
 
