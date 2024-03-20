@@ -1089,6 +1089,11 @@
 
 
   @media screen and (max-width: 430px) {
+    body{
+      width: 100%; 
+    overflow-x: hidden; 
+    touch-action: pan-y; 
+    }
    .navigation{
      display: none;
    }
