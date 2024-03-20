@@ -1089,11 +1089,10 @@
 
 
   @media screen and (max-width: 430px) {
-    body{
-      width: 100%; 
-    overflow-x: hidden; 
-    touch-action: pan-y; 
+    html{
+      overflow-x: hidden;
     }
+    
    .navigation{
      display: none;
    }
@@ -1106,6 +1105,7 @@
     height: 80vh;
     top: -20vh;
     left: 98%;
+    
   }
   .hero-logo{
     top: 25%;
