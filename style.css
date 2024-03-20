@@ -1092,25 +1092,41 @@
     html{
       overflow-x: hidden;
     }
-    
+    header{
+      background-color: #9BAAC0;
+      height: 30%;
+    }
+    .logo{
+      width: 60%;
+      height: auto;
+    }
    .navigation{
      display: none;
    }
     .svg-container {
     height: 40vh;
   }
-
+  .svg-sun{
+    top: 25px;
+    left:20%;
+    height: 90px;
+    width: 90px;
+  }
   .crane{
     width: 100vw;
     height: 80vh;
     top: -20vh;
-    left: 98%;
+    left: 110%;
     
   }
   .hero-logo{
     top: 25%;
     width: 75%;
-    left:10%;
+    left:20% !important;
+  }
+  .quote-button{
+    top: 50%;
+    left: 72%;
   }
   .semicircle{
     height: 27%;
