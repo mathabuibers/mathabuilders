@@ -40,7 +40,9 @@
     padding: 30px;
     font-weight: 900;
   }
-
+ .hamburger{
+  display: none;
+ }
   .logo {
     width: 30%;
     height: auto;
@@ -442,6 +444,9 @@
     z-index: 3;
   }
 
+  .navigation-buttons{
+    display: none;
+  }
   /* @media screen and (max-width: 1600px) {
    .small-image{
     width:60%;
@@ -1089,26 +1094,76 @@
 
 
   @media screen and (max-width: 430px) {
+    html{
+      overflow-x: hidden;
+    }
+    header{
+      background-color: #9BAAC0;
+      height: 30%;
+    }
+    .logo{
+      width: 60%;
+      height: auto;
+    }
    .navigation{
      display: none;
    }
+   .hamburger {
+    display: block;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .line {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .hamburger.open .line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  .hamburger.open .line:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.open .line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
     .svg-container {
     height: 40vh;
   }
-
+  .svg-sun{
+    top: 25px;
+    left:20%;
+    height: 90px;
+    width: 90px;
+  }
   .crane{
     width: 100vw;
     height: 80vh;
     top: -20vh;
-    left: 98%;
+    left: 110%;
+    
   }
   .hero-logo{
     top: 25%;
     width: 75%;
-    left:10%;
+    left:20% !important;
+  }
+  .quote-button{
+    top: 50%;
+    left: 72%;
   }
   .semicircle{
-    height: 27%;
+    height: 30%;
     position: absolute;
   }
   .about-h1{
@@ -1123,14 +1178,21 @@
   padding-left: 20px;
   width: 58ch;
   }
+  .about-button{
+    top: 50%;
+    left: 35%;
+    padding: 7.5px 20px;
+    font-size: 10px;
+  }
   .screen .horizontal-line::before{
-    top: 30px;
+    top: 27px;
     left: 20px;
+    width:40px
   }
   #about{
     margin-top: 20px;
     padding-left: 50px;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
   .phone{
     outline: 0;
@@ -1149,10 +1211,74 @@
  .about-build{
    display: none;
  }
- .small-image-container{
+
+.feedback{
+  margin-top: 70%;}
+.project-header{
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    margin-right: 20%;
+}
+  .title-underline{
+    width: 40px;
+  }
+
+
+ .explore-text{
+   font-size: 1.9rem;
+   margin-top: 0px;
+   margin-right: 20%;
+ }.work-gallery {
+  position: relative;
+  margin-top: 10px;
+}
+
+.large-image-container {
+  max-width: 60%; /* Adjust the width as needed */
+  margin: 0 auto; /* Center the image */
+  position: relative;
+}
+
+.navigation-buttons {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: calc(100% - 40px); /* Adjust width to leave space for padding */
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px; /* Adjust spacing as needed */
+}
+
+#prevBtn, #nextBtn {
+  cursor: pointer;
+  background-color: var(--article-hover-border);
+  border: none;
+  outline: none;
+  color:#567EBB;
+  font-size: 50px;
+  transition: background-color 0.3s ease;
+  width: 50px;
+  height: 70px;
+  padding: 0;
+  margin: 0;
+}
+
+#prevBtn::before, #nextBtn::before {
+  display: inline-block;
+  content: attr(data-content); /* This is necessary for the arrow characters */
+  transform: scaleX(0.5) scaleY(1.5); /* Adjust scaling */
+}
+
+#prevBtn {
+  transform: scaleX(-1); /* Flip the previous button horizontally */
+}
+
+.small-image-container {
+  display: none;
+}
+ .all-project{
   display: none;
  }
- 
  .image-row{
    justify-content: center;
    transform: translateX(-4%);
@@ -1189,6 +1315,22 @@
   }
   .testimonial-container{
     top: 66.6%;
+  }
+
+  .article-text-container{
+    height: 250px;
+  }
+  .article-text{
+    font-size: 1.5rem;
+  }
+
+  .article-top-text{
+    font-size: 0.6rem;
+    margin-right: 100px;
+  }
+  .article-horizontal-line::after{
+    width: 50px;
+  
   }
  .hidden{
    display: none;
