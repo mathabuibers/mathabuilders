@@ -1291,6 +1291,9 @@
     width: 50px;
   
   }
+  .indicator-row{
+    display: none;
+  }
 .article-button{
   display: none;
 }
