@@ -120,3 +120,18 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 //phone
+
+// timer for the testimonial contents
+
+const ids=['slide1','slide2','slide3']
+
+let i=0;
+
+function changeSlide(){
+    document.getElementById(ids[i]).style.display='none';
+    i=(i+1)%ids.length;
+    document.getElementById(ids[i]).style.display='block';
+}
+
+setInterval(changeSlide,5000);
+

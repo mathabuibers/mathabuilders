@@ -785,6 +785,7 @@
     position: relative;
     top: 7vh;
     left: -250px;
+    width: 90ch;
 
   }
 
@@ -821,7 +822,7 @@
     width: 180.31px;
     height: 64px;
     background: var(--button-background);
-    gap: 8.73px;
+    
     border-left: 5.24px solid var(--article-hover-border);
     color: var(--background);
     font-family: var(--oswald-font);
@@ -1003,7 +1004,6 @@
     letter-spacing: 0em;
     text-align: left;
   }
-
   #copyrightsign {
     font-family: var(--opensans-font);
     font-size: 12px;
@@ -1011,6 +1011,10 @@
     line-height: 22px;
     letter-spacing: 0em;
     text-align: left;
+   
+  }
+  #copyrightsign a{
+    text-decoration: none;
   }
 
   .icons {
@@ -1154,15 +1158,11 @@
     
   }
   
-  .lightcrane{
-    width : 214.44px;
-    height: 205px;
-    margin-left:100px;
-  }
+
   .hero-logo{
     top: 25%;
     width: 75%;
-    left:20% !important;
+    left:20% ;
   }
   .quote-button{
     top: 50%;
@@ -1263,7 +1263,6 @@
   color:#567EBB;
   font-size: 70px;
   transition: background-color 0.3s ease;
-  
   padding: 0;
   margin: 0;
 }
@@ -1273,15 +1272,10 @@
   content: attr(data-content); /* This is necessary for the arrow characters */
   transform: scaleX(0.5) scaleY(1.5); /* Adjust scaling */
 }
-
-
-
 .small-image-container {
   display: none;
 }
- .all-project{
-  display: none;
- }
+ 
  .image-row{
    justify-content: center;
    transform: translateX(-4%);
@@ -1297,25 +1291,25 @@
     
     left: 30px;
   }
-  #slide1,#slide3{
-    display: none;
-  }
-  #slid2,.slide2{
+
+  #slide2,.slide2,.slide1,#slide1, #slide3, .slide3{
     width: 65%;
     height:auto;
   }
   .rounded-box{
-    
     height: 500px;
   }
-  #project-button{
+  #project-button {
     top: 160px;
     width: 150px;
     height: 50px;
     font-size: 10px;
-    clear: both;
-    right: 120px;
-  }
+    z-index: 10;
+    display: block;
+    position: relative;
+    margin-right:90px; /* Adjust top margin as necessary */
+}
+
   .testimonial-container{
     top: 66.6%;
   }
@@ -1335,6 +1329,29 @@
     width: 50px;
   
   }
+.article-button{
+  
+}
+  .contact-text-container h1{
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+
+    
+  }
+  .contact-text-container p{
+  font-size: 0.9rem;
+  margin-top:7px ;
+  
+  }
+  .contact-button{
+    font-size:0.8rem;
+    width: 140px;
+    height: 50px;
+    gap: 10%;
+  }
+   
+
  .hidden{
    display: none;
  }
