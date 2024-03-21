@@ -72,7 +72,7 @@ window.addEventListener('load', function() {
   var isMobile = window.matchMedia('(max-width: 767px)').matches; // Check if the device is mobile
   
   if (isMobile) {
-    heroLogo.style.left = '10%'; // Set the left value to 105px for mobile devices
+    heroLogo.style.left = '20%'; // Set the left value to 105px for mobile devices
   } else {
     heroLogo.style.left = '15%'; // Set the left value to 15% for other devices
   }
@@ -120,3 +120,38 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 //phone
+
+// timer for the testimonial contents
+const ids = ['slide1', 'slide2', 'slide3'];
+let i = 0;
+let intervalId;
+
+// Function to hide all slides
+function hideAllSlides() {
+    ids.forEach(id => {
+        document.getElementById(id).style.display = 'none';
+    });
+}
+
+// Function to change slide
+function changeSlide() {
+    document.getElementById(ids[i]).style.display = 'none';
+    i = (i + 1) % ids.length;
+    document.getElementById(ids[i]).style.display = 'block';
+}
+
+// Function to start slideshow for mobile
+function startSlideshowForMobile() {
+    // Check if viewport width is less than or equal to a certain value (e.g., 768px for mobile)
+    if (window.innerWidth <= 768) {
+        // Hide all slides initially
+        hideAllSlides();
+        // Change slide immediately after the page loads
+        changeSlide();
+        // Start the slideshow if the viewport width is for mobile
+        intervalId = setInterval(changeSlide, 5000);
+    }
+}
+
+// Call the function to start the slideshow for mobile devices when the page is loaded
+window.onload = startSlideshowForMobile;
