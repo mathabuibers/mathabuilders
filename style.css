@@ -1153,6 +1153,12 @@
     left: 110%;
     
   }
+  
+  .lightcrane{
+    width : 214.44px;
+    height: 205px;
+    margin-left:100px;
+  }
   .hero-logo{
     top: 25%;
     width: 75%;
@@ -1243,10 +1249,10 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: calc(100% - 40px); /* Adjust width to leave space for padding */
+  width: calc(100% - 25px); /* Adjust width to leave space for padding */
   display: flex;
   justify-content: space-between;
-  padding: 0 20px; /* Adjust spacing as needed */
+  /* Adjust spacing as needed */
 }
 
 #prevBtn, #nextBtn {
@@ -1255,10 +1261,9 @@
   border: none;
   outline: none;
   color:#567EBB;
-  font-size: 50px;
+  font-size: 70px;
   transition: background-color 0.3s ease;
-  width: 50px;
-  height: 70px;
+  
   padding: 0;
   margin: 0;
 }
@@ -1269,9 +1274,7 @@
   transform: scaleX(0.5) scaleY(1.5); /* Adjust scaling */
 }
 
-#prevBtn {
-  transform: scaleX(-1); /* Flip the previous button horizontally */
-}
+
 
 .small-image-container {
   display: none;
