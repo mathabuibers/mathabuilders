@@ -622,6 +622,9 @@
   position: relative;
   
 }
+#box4-text{
+  display: none;
+}
 
 /* Create border effect on hover */
 
@@ -858,44 +861,6 @@
       top: 6vh;
   }
 }
-/*
-  @media screen and (max-width: 1400px) {
-    footer {
-      position: relative;
-      top: 60px;
-    }
-  }
-
-  @media screen and (max-width: 1300px) {
-
-    footer {
-      position: relative;
-      top: 90px;
-    }
-  }
-
-  @media screen and (max-width: 1200px) {
-    footer {
-      position: relative;
-      top: 80px;
-    }
-  }
-
-  @media screen and (max-width: 1150px) {
-    footer {
-      position: relative;
-      top: 90px;
-    }
-  }
-
-  @media screen and (max-width: 1000px) {
-    footer {
-      position: relative;
-      top: 107px;
-    }
-  }
-
-*/
 
   hr {
 
@@ -983,14 +948,7 @@
     color: var(--active-nav-link);
   }
 
-  #bashers {
-    font-family: var(--opensans-font);
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 22px;
-    letter-spacing: 0em;
-    text-align: left;
-  }
+ 
 
   .footer-link:hover {
     color: var(--active-nav-link);
@@ -1003,6 +961,7 @@
     line-height: 22px;
     letter-spacing: 0em;
     text-align: left;
+  color: var(--footer-text);  
   }
   #copyrightsign {
     font-family: var(--opensans-font);
@@ -1011,6 +970,7 @@
     line-height: 22px;
     letter-spacing: 0em;
     text-align: left;
+    
    
   }
   #copyrightsign a{
@@ -1141,11 +1101,13 @@
   .hamburger.open .line:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
-    .svg-container {
+ 
+  .svg-container {
+    
     height: 40vh;
   }
   .svg-sun{
-    top: 25px;
+    top: 28%;
     left:20%;
     height: 90px;
     width: 90px;
@@ -1153,19 +1115,19 @@
   .crane{
     width: 100vw;
     height: 80vh;
-    top: -20vh;
+    top: -14vh;
     left: 110%;
     
   }
   
 
   .hero-logo{
-    top: 25%;
+    top: 38%;
     width: 75%;
     left:20% ;
   }
   .quote-button{
-    top: 50%;
+    top: 65%;
     left: 72%;
   }
   .semicircle{
@@ -1315,7 +1277,7 @@
   }
 
   .article-text-container{
-    height: 250px;
+    height: 180px;
   }
   .article-text{
     font-size: 1.5rem;
@@ -1330,8 +1292,21 @@
   
   }
 .article-button{
+  display: none;
+}
+#box4-text{
+  display: block;
+}
+#box4{
+  background-color: #666666;
+  color: white;
+  box-sizing: border-box;
+  padding: 15px;
   
 }
+ .contact-container{
+  margin-top: 50px;
+ }
   .contact-text-container h1{
     font-weight: bold;
     font-size: 1.5rem;
@@ -1351,17 +1326,21 @@
     gap: 10%;
   }
    
-
+/*Footer */
  .hidden{
    display: none;
  }
  .list1,.list2,.list3
  {display: flex;
   justify-content: center;}
+ .footer-link{
+  text-align: center;
+ }
+ 
 
   .footer-list-container{
-
-    flex-wrap: wrap ;
+    
+    flex-direction: column;
   }
 }
 
