@@ -757,6 +757,16 @@
   position: relative; /* Add relative positioning */
 }
 
+.box:nth-child(4)::before{
+  content: ""; /* Create a pseudo-element */
+  position: absolute; /* Position it absolutely within the parent container */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2); /* Overlay color with 50% opacity */
+  border-bottom-right-radius: inherit;
+}
 .box:nth-child(4):hover::after {
   content: '';
   position: absolute; /* Use absolute positioning */
