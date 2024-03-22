@@ -155,3 +155,33 @@ function startSlideshowForMobile() {
 
 // Call the function to start the slideshow for mobile devices when the page is loaded
 window.onload = startSlideshowForMobile;
+
+
+// Hamburger menu
+document.addEventListener("DOMContentLoaded", function () {
+  const menuItems = document.querySelectorAll(".menu__item");
+
+  menuItems.forEach(function (menuItem) {
+      menuItem.addEventListener("click", function (event) {
+          // Prevent default link behavior
+          event.preventDefault();
+
+          // Get the target section ID from the href attribute
+          const targetId = this.getAttribute("href").substring(1);
+
+          // Find the target section
+          const targetSection = document.getElementById(targetId);
+
+          // Scroll to the target section
+          if (targetSection) {
+              targetSection.scrollIntoView({ behavior: "smooth" });
+          }
+
+          // Close the menu after clicking a link (optional)
+          const menuToggle = document.getElementById("menu__toggle");
+          if (menuToggle.checked) {
+              menuToggle.checked = false;
+          }
+      });
+  });
+});
