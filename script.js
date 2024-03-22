@@ -72,9 +72,9 @@ window.addEventListener('load', function() {
   var isMobile = window.matchMedia('(max-width: 767px)').matches; // Check if the device is mobile
   
   if (isMobile) {
-    heroLogo.style.left = '20%'; // Set the left value to 105px for mobile devices
+    heroLogo.style.left = '20%';
   } else {
-    heroLogo.style.left = '15%'; // Set the left value to 15% for other devices
+    heroLogo.style.left = '15%';
   }
   window.addEventListener('scroll', function() {
     var logoRect = heroLogo.getBoundingClientRect();
@@ -84,7 +84,7 @@ window.addEventListener('load', function() {
       heroLogo.style.left = '-200px'; // Move the logo completely out of the viewport
     } else {
       if (isMobile) {
-        heroLogo.style.left = '10%'; // Set the left value to 105px for mobile devices
+        heroLogo.style.left = '20%'; // Set the left value to 105px for mobile devices
       } else {
         heroLogo.style.left = 'calc(15% - ' + window.pageYOffset + 'px)'; // Move the logo towards the left based on scroll position
         heroLogo.style.transition = 'left 0s'; // Add transition to the left property

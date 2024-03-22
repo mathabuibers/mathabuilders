@@ -15,6 +15,9 @@
     /* for buttons,heading */
     --opensans-font: 'Open Sans', sans-serif;
     /* for about section , */
+
+
+    --box-radius:100px;
   }
 
   body {
@@ -630,7 +633,7 @@
 
 
 .box:nth-child(1) {
-  border-top-left-radius: 100px;
+  border-top-left-radius: var(--box-radius);
   transform-origin: right;
   animation: smallbox 1s forwards;
   animation-timeline: view();
@@ -654,7 +657,7 @@
 
 
 .box:nth-child(2) {
-  border-top-right-radius: 100px;
+  border-top-right-radius: var(--box-radius);
   transform-origin: left;
   animation: smallbox 1s forwards;
   animation-timeline: view();
@@ -677,7 +680,7 @@
 
 
 .box:nth-child(3) {
-  border-bottom-left-radius: 100px;
+  border-bottom-left-radius:var(--box-radius);
   transform-origin: left;
   animation: smallbox 1s forwards;
   animation-timeline: view();
@@ -700,7 +703,7 @@
 
 
 .box:nth-child(4) {
-  border-bottom-right-radius: 100px;
+  border-bottom-right-radius:var(--box-radius);
   transform-origin: right;
   animation: smallbox 1s forwards;
   animation-timeline: view();
@@ -857,6 +860,10 @@
   }
 
   @media screen and (max-width: 1600px) {
+
+
+ 
+
     .contact-text-container {
       top: 6vh;
   }
@@ -1058,6 +1065,12 @@
 
 
   @media screen and (max-width: 430px) {
+    
+    :root{
+    --box-radius: 50px;
+  }
+    
+    
     html{
       overflow-x: hidden;
     }
