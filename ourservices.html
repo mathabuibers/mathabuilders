@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Card with Overflowing Image</title>
+    <title>Our Services</title>
     <style>
        * {
   margin: 0;
@@ -83,13 +83,235 @@ div.container .ip-add-cart {
 div.container .ip-add-cart:hover {
   background: #da1920;
 }
+.hero {
+    background-image: url('https://th.bing.com/th/id/R.8d0146da85b34dda9013cd8adb9591ae?rik=Ox5c6tAYQsgp1Q&riu=http%3a%2f%2fwww.thebluebook.com%2finc%2fimg%2fqp%2f235306%2four-services.jpg&ehk=ZZKbj%2fjNXZikjl3lDcxMu5Iz%2fl1aVeZVThee9mafMtU%3d&risl=&pid=ImgRaw&r=0'); /* Replace 'hero-background.jpg' with your image URL */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    background-color: #fff;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #f4f4f4;
+}
+
+/* Parallax effect */
+.hero::after {
+    content: "";
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    mix-blend-mode: overlay;
+    transform: translateZ(-1px) scale(2);
+}
+@media screen and (max-width: 450px) {
+  div.container {
+    height: 35vh;
+  }
+  div.container h3 {
+    font-size: 20px;
+  }
+  div.container p {
+    font-size: 10px;
+  }
+  div.container .ip-add-cart {
+    padding: 10px 30px;
+    font-size: 10px;
+  }
+  div.container img.img-fruit{
+    width: 60%;
+    max-width: 170px;
+    height:115px;
+  
+  }
+  div.container img.img-fruit:hover{
+    transform: scale(1.1);
+  }
+}
+/* Footer section*/
+footer {
+    width: 100%;
+    background-color: var(--hero-background);
+    color: var(--footer-text);
+    font-family: var(--opensans-font);
+
+  }
+
+  @media screen and (max-width: 1600px) {
 
 
+ 
 
+    .contact-text-container {
+      top: 6vh;
+  }
+}
+
+  hr {
+
+    width: 100%;
+    height: 2px;
+    background-color: var(--text);
+    border: none;
+    position: relative;
+    top: 3px;
+  }
+
+  .footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20%;
+    width: 100%;
+    height: auto;
+    padding: 30px 0;
+    position: relative;
+    left: -10%;
+    
+    flex-wrap: wrap;
+  }
+.footer-list-container{
+  display: flex;
+  gap: 30%;
+  
+  justify-content: center;
+  width: auto;
+  
+  
+}
+  #copyright {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    gap: 50%;
+    font-weight: 700px;
+    flex-wrap: wrap-reverse;
+  }
+
+  #social-items {
+    margin: 16px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 8px;
+    height: 8px;
+
+  }
+
+  footer svg {
+    width: 20%;
+    height: 10%;
+    padding: 1.5em;
+  }
+
+ .footer-link {
+    font-family: var(--opensans-font);
+   
+    color: var(--footer-text);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+    white-space: nowrap;
+
+
+  }
+.list1,.list2,.list3{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  height: auto;
+  padding: 0 20px;
+  position: relative;
+  left: 10%;
+  top: 10px;
+}
+  .footer-link:hover {
+    color: var(--active-nav-link);
+  }
+
+ 
+
+  .footer-link:hover {
+    color: var(--active-nav-link);
+  }
+
+  #bashers {
+    font-family: var(--opensans-font);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+  color: var(--footer-text);  
+  }
+  #copyrightsign {
+    font-family: var(--opensans-font);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    
+   
+  }
+  #copyrightsign a{
+    text-decoration: none;
+  }
+
+  .icons {
+    color: var(--text);
+  }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="hero">
+      <div class="hero-content">
+          <h1>Our Services</h1>
+          <p>Discover our wide range of construction services</p>
+          <a href="#services" class="btn">Explore</a>
+      </div>
+    </div>
+
+    <div class="container" id="residential-construction" >
         <img src="https://www.realestate.com.au/blog/images/5669x3779-fit,progressive/2019/09/09102153/8695_Tullamore_HOFFMAN_VILLA_37-Lonsdale-facade.jpg" alt="Strawberry" class="img-fruit" />
       <h3>Residential Construction</h3>
 
@@ -99,19 +321,19 @@ div.container .ip-add-cart:hover {
       
       <input class="ip-add-cart" type="button" value="Get a Quote" onclick="window.location.href='contact.html'"/>
     </div>
-    <div class="container">
-        <img src="https://www.realestate.com.au/blog/images/5669x3779-fit,progressive/2019/09/09102153/8695_Tullamore_HOFFMAN_VILLA_37-Lonsdale-facade.jpg" alt="Strawberry" class="img-fruit" />
+    <div class="container" id="commercial-construction">
+        <img src="https://s3-us-west-1.amazonaws.com/acropolis-wp-content-uploads/commercial-construction-hero-image.jpg" alt="Strawberry" class="img-fruit" />
       <h3>Commercial Construction</h3>
 
       <p>
-        The garden strawberry is a widely grown hybrid species of the genus Fragaria. It is cultivated worldwide for its fruit.
+        We specialize in commercial builds, including offices, retail spaces, and hospitality establishments
       </p>
       
       <input class="ip-add-cart" type="button" value="Get a Quote" />
     </div>
     <div class="container">
-        <img src="https://www.realestate.com.au/blog/images/5669x3779-fit,progressive/2019/09/09102153/8695_Tullamore_HOFFMAN_VILLA_37-Lonsdale-facade.jpg" alt="Strawberry" class="img-fruit" />
-      <h3>Project Management</h3>
+        <img src="https://th.bing.com/th/id/OIP.DtMLdc3rpacTVY5z_7_bCgHaE7?rs=1&pid=ImgDetMain" alt="Strawberry" class="img-fruit" />
+      <h3>Project<br> Management</h3>
 
       <p>
         The garden strawberry is a widely grown hybrid species of the genus Fragaria. It is cultivated worldwide for its fruit.
@@ -120,5 +342,72 @@ div.container .ip-add-cart:hover {
       <input class="ip-add-cart" type="button" value="Get a Quote" />
     </div>
     
+    <div class="container">
+      <img src="https://www.realestate.com.au/blog/images/5669x3779-fit,progressive/2019/09/09102153/8695_Tullamore_HOFFMAN_VILLA_37-Lonsdale-facade.jpg" alt="Strawberry" class="img-fruit" />
+    <h3>Design <br>& build</h3>
+
+    <p>
+      The garden strawberry is a widely grown hybrid species of the genus Fragaria. It is cultivated worldwide for its fruit.
+    </p>
+    
+    <input class="ip-add-cart" type="button" value="Get a Quote" />
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <img src="./assets/svg/footer-logo.svg" alt="">
+            <div class="footer-list-container">
+              <div class="list1">
+                  <a href="#" class="footer-link hidden">About</a>
+                  <a href="#" class="footer-link hidden">Terms & Conditions</a>
+                  <a href="#" class="footer-link hidden">Privacy Policy</a>
+                  <a href="#" class="footer-link hidden">Career</a>
+                  <a href="#" class="footer-link hidden">Contact</a>
+                  <a href="#" class="footer-link hidden">Help</a>
+              </div>
+              <div class="list2">
+                <p class="footer-link" style="justify-content: center;">
+                  <b>Address : </b><br> No 14 , Adithanar nagar 
+                   <br> Udaiyanpatti  
+                   KK Nagar, <br>
+                   Kumaramangalam , <br>
+                   Tamil Nadu - 620012 .</p>
+                   <a href="#" class ="footer-link hidden">Quick Links</a>
+                  <a href="#" class ="footer-link hidden">Newsletter</a>
+                  <a href="#" class ="footer-link hidden">Articles</a>
+                  
+              </div>
+              <div class="list3">
+                
+                   
+                    <a href="https://maps.app.goo.gl/yFW1BWi6PC5phzFG9" class ="footer-link">Location</a>
+                  <a class="footer-link">+91 9952653148</a>
+                  <a class="footer-link">+91 9597028632</a>
+                  <a class="footer-link ">info@yourinfo.com</a>
+              </div>
+            </div>
+        </div>
+    
+    <hr>
+    <div  id="copyright">
+        <p id="copyrightsign">&copy;2023 Matha Builders | Designed by:<a href="https://byte-bash-blitz.github.io/" target="blank" id="bashers">BASHERS</a></p>
+        <div id="social-items">
+        <a href="#" title="Facebook"><i class="fa fa-facebook icons"></i></a>
+        <a href="#"><i class="fa fa-instagram icons"></i></a>
+        <a href="#"><i class="fa fa-linkedin icons"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter icons"></i></a>
+        <a href="#"><i class="fa fa-youtube icons"></i></a>
+      </div>  
+
+    </div>
+
+</footer>
+
+  <script>// Parallax effect
+    window.addEventListener('scroll', function() {
+        const scrolled = window.scrollY;
+        document.querySelector('.hero').style.transform = 'translate3d(0,' + scrolled * 0.4 + 'px,0)';
+    });
+    </script>
 </body>
 </html>
