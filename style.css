@@ -660,6 +660,7 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2); /* Overlay color with 50% opacity */
   border-top-left-radius: inherit;
+  backdrop-filter: blur(2px);
 }
 
 
@@ -687,7 +688,7 @@
   animation-range: 0 400px;
   position: relative; /* Add relative positioning */
 }
-.box:nth-child(1)::before{
+.box:nth-child(2)::before{
   content: ""; /* Create a pseudo-element */
   position: absolute; /* Position it absolutely within the parent container */
   top: 0;
@@ -696,6 +697,7 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2); /* Overlay color with 50% opacity */
   border-top-right-radius: inherit;
+  backdrop-filter: blur(2px);
 }
 .box:nth-child(2):hover::after {
   content: '';
@@ -730,6 +732,7 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2); /* Overlay color with 50% opacity */
   border-bottom-left-radius: inherit;
+  backdrop-filter: blur(2px);
 }
 .box:nth-child(3):hover::after {
   content: '';
@@ -757,6 +760,18 @@
   position: relative; /* Add relative positioning */
 }
 
+.box:nth-child(4)::before{
+  content: ""; /* Create a pseudo-element */
+  position: absolute; /* Position it absolutely within the parent container */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2); /* Overlay color with 50% opacity */
+  border-bottom-right-radius: inherit;
+  backdrop-filter: blur(2px);
+  
+}
 .box:nth-child(4):hover::after {
   content: '';
   position: absolute; /* Use absolute positioning */
@@ -1110,7 +1125,7 @@
   }
 
 
-  @media screen and (max-width: 430px) {
+  @media screen and (max-width: 450px) {
     
     :root{
     --box-radius: 50px;
@@ -1418,7 +1433,10 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.699); /* Overlay color with 50% opacity */
-  border-bottom-right-radius: var(--box-radius) /* Inherit border radius from parent */
+  border-bottom-right-radius: var(--box-radius); /* Inherit border radius from parent */
+
+
+
 }
 
 #box4-text{
@@ -1464,9 +1482,12 @@
  }
  .list1,.list2,.list3
  {display: flex;
-  justify-content: center;}
+  justify-content: center;
+
+}
  .footer-link{
   text-align: center;
+  font-size: 17px;
  }
  
 

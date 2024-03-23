@@ -31,23 +31,23 @@
        
       </label>
   
-      <ul class="menu__box">
-        <li><a class="menu__item" href="#">Home</a></li>
+      <ul class="menu__box" id="home">
+        <li><a class="menu__item" href="#home">Home</a></li>
         <li><a class="menu__item" href="#about-us">About us</a></li>
-        <li><a class="menu__item" href="#">Projects</a></li>
-        <li><a class="menu__item" href="#">News</a></li>
-        <li><a class="menu__item" href="#">Contact</a></li>
+        <li><a class="menu__item" href="#projects">Projects</a></li>
+        <li><a class="menu__item" href="#News">News</a></li>
+        <li><a class="menu__item" href="#contact">Contact</a></li>
       </ul>
     </div>
     
     <img src="./assets/svg/logo.svg" alt="Matha Builders Logo" class="logo" />
       <nav class="navigation">
        
-        <a href="#" class="active" tabindex="0">Home</a>
+        <a href="#home" class="active" tabindex="0">Home</a>
         <a href="#about-us"  tabindex="0">About</a>
         <a href="#projects"  tabindex="0">Projects</a>
-        <a href="#" tabindex="0">News</a>
-        <a href="#" tabindex="0">Contact</a>
+        <a href="#News" tabindex="0">News</a>
+        <a href="#contact" tabindex="0">Contact</a>
       </nav>
 
   </header>
@@ -140,7 +140,7 @@
             <button  id="nextBtn" class="indicator" title="Previous"></button>
     
            </div><br>
-          <button  id="project-button" >ALL PROJECTS</button>
+          <button id="project-button" ><a href="./photogallery.html">ALL PROJECTS</a></button>
         </div>
         <div class="testimonial-client">
           <div class="horizontal-line"></div>
@@ -206,13 +206,15 @@
 </section>
 
 
-<section class="articles">
+<section class="articles" id="News">
   <div class="box-container">
     
     <div class="article-container">
     
-      <div id='box1' class="box "> <h1>Residential Construction </h1> </div>
-      <div id='box2' class="box"> <h2>Commercial Construction</h2> </div>
+      <div id='box1' class="box " onclick="window.location.href='https://google.com'">
+        <h1>Residential Construction</h1>
+      </div>
+      <div id='box2' class="box"  onclick="window.location.href='https://google.com'"> <h1>Commercial Construction</h1> </div>
       <div id="box3" class="box"> <h1>Project Management</h1> </div>
       <div id="box4" class="box ">
       <h1 class="hidden">Design & Build</h1>
@@ -262,7 +264,7 @@
       <div class="contact-text-container">
           <h1>Are you ready to start new project ?</h1>
           <p><span class="hidden">If you have any projects in mind</span> say hello at <b> contact@yourinfo.com or just call us <br> <b> +111 1234 2344 1232.</b></p>
-          <button class="contact-button">GET IN TOUCH</button>
+          <button class="contact-button"><a style="text-decoration: none;color: white;" href="contact.html">GET IN TOUCH</a></button>
       </div>
   </div>
   </section>
@@ -272,24 +274,31 @@
       <img src="./assets/svg/footer-logo.svg" alt="">
             <div class="footer-list-container">
               <div class="list1">
-                  <a href="#" class="footer-link">About</a>
+                  <a href="#" class="footer-link hidden">About</a>
                   <a href="#" class="footer-link hidden">Terms & Conditions</a>
                   <a href="#" class="footer-link hidden">Privacy Policy</a>
                   <a href="#" class="footer-link hidden">Career</a>
-                  <a href="#" class="footer-link">Contact</a>
-                  <a href="#" class="footer-link">Help</a>
+                  <a href="#" class="footer-link hidden">Contact</a>
+                  <a href="#" class="footer-link hidden">Help</a>
               </div>
               <div class="list2">
-              
-                  <a href="#" class ="footer-link hidden">Quick Links</a>
-                  <a href="#" class ="footer-link">Newsletter</a>
-                  <a href="#" class ="footer-link">Articles</a>
-                  <a href="#" class ="footer-link">Location</a>
+                <p class="footer-link" style="justify-content: center;">
+                  <b>Address : </b><br> No 14 , Adithanar nagar 
+                   <br> Udaiyanpatti  
+                   KK Nagar, <br>
+                   Kumaramangalam , <br>
+                   Tamil Nadu - 620012 .</p>
+                   <a href="#" class ="footer-link hidden">Quick Links</a>
+                  <a href="#" class ="footer-link hidden">Newsletter</a>
+                  <a href="#" class ="footer-link hidden">Articles</a>
+                  
               </div>
               <div class="list3">
-                  <a class="footer-link">xxxxxxxxxx</a>
-                  <a class="footer-link">xxxxxxxxxx</a>
-                  <a class="footer-link">+911111111111</a>
+                
+                   
+                    <a href="https://maps.app.goo.gl/yFW1BWi6PC5phzFG9" class ="footer-link">Location</a>
+                  <a class="footer-link">+91 9952653148</a>
+                  <a class="footer-link">+91 9597028632</a>
                   <a class="footer-link ">info@yourinfo.com</a>
               </div>
             </div>
