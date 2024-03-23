@@ -1,6 +1,6 @@
 function setupImageGallery(totalImages, largeImageClass, smallImageClass) {
-  const prevBtn = document.getElementById('prevBtn');
-  const nextBtn = document.getElementById('nextBtn');
+  const prevBtns = document.querySelectorAll('#prevBtn'); // Select all elements with ID "prevBtn"
+  const nextBtns = document.querySelectorAll('#nextBtn'); // Select all elements with ID "nextBtn"
   const largeImage = document.querySelector(largeImageClass);
   const smallImage = document.querySelector(smallImageClass);
 
@@ -23,17 +23,19 @@ function setupImageGallery(totalImages, largeImageClass, smallImageClass) {
   }
 
   // Event listener for the previous button
-  prevBtn.addEventListener('click', () => {
-    currentIndex -= 1;
-    updateImages();
+  prevBtns.forEach(button => {
+    button.addEventListener('click', function() {
+      currentIndex -= 1;
+      updateImages();
+    });
   });
-
-  // Event listener for the next button
-  nextBtn.addEventListener('click', () => {
-    goToNextImage();
+  
+  nextBtns.forEach(button => {
+    button.addEventListener('click', function() {
+      goToNextImage();
+    });
   });
-
-  // Function to start automatic sliding
+ 
   function startSlideInterval() {
     slideInterval = setInterval(goToNextImage, 3000);
   }
@@ -62,6 +64,14 @@ function setupImageGallery(totalImages, largeImageClass, smallImageClass) {
 
 // Call the function with parameters
 setupImageGallery(19, '.large-image', '.small-image');
+
+function redirectToServices() {
+  window.location.href = 'ourservices.html';
+}
+
+if (window.innerWidth <= 430) {
+  document.getElementById('box4').addEventListener('click', redirectToServices);
+}
 
 /*==================== ANImaTION ====================*/
 
