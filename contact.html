@@ -2,9 +2,11 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./style.css">
 <style>
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--opensans-font);
+  
 }
 
 * {
@@ -15,28 +17,33 @@ body {
 input[type=text],input[type=email] ,select, textarea {
   width: 100%;
   padding: 12px;
-  border: 1px solid #ccc;
+  border-left: 10px solid var(--article-hover-border);
   margin-top: 6px;
   margin-bottom: 16px;
   resize: vertical;
+  border-radius: 7px;
 }
 
 input[type=submit] {
-  background-color: #04AA6D;
-  color: white;
-  padding: 12px 20px;
+  background-color: var(--button-background);
   border: none;
+  border-right: 10px solid var(--article-hover-border);
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 12px 20px;
+
   cursor: pointer;
 }
 
 input[type=submit]:hover {
-  background-color: #45a049;
+  background-color:var(-- --article-hover-border);
 }
 
 /* Style the container/contact section */
 .container {
   border-radius: 5px;
-  background-color: #f2f2f2;
+  background-color:var(--hero-background);
   padding: 10px;
 }
 
@@ -80,7 +87,7 @@ input[type=submit]:hover {
         <label for="fname">Name</label>
         <input type="text" id="fname" name="firstname" placeholder="Your name..">
         <label for="email">Mail</label>
-        <input type="email" id="lname" name="lastname" placeholder="Your Mail..">
+        <input type="email" id="mail" name="email" placeholder="Your Mail..">
        
         <label for="subject">Message</label>
         <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
