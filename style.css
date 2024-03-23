@@ -758,12 +758,8 @@
   animation-timeline: view();
   animation-range: 0 400px;
   position: relative; /* Add relative positioning */
- 
-  
 }
-.box:nth-child(4):hover{
-  background-color: rgba(0, 0, 0, 0.2);
-}
+
 .box:nth-child(4)::before{
   content: ""; /* Create a pseudo-element */
   position: absolute; /* Position it absolutely within the parent container */
@@ -785,7 +781,7 @@
   height: calc(100%); /* Adjust to include border widths */
   border-right: 20px solid var(--article-hover-border);
   border-bottom: 20px solid var(--article-hover-border);
-  border-bottom-right-radius: calc(var(--border-radius) +20px); /* Match box's bottom-right radius */
+  border-bottom-right-radius: 120px; /* Match box's bottom-right radius */
   pointer-events: none; /* Prevent hover from affecting underlying elements */
 }
 
@@ -1129,7 +1125,7 @@
   }
 
 
-  @media screen and (max-width: 430px) {
+  @media screen and (max-width: 450px) {
     
     :root{
     --box-radius: 50px;
