@@ -59,9 +59,18 @@ function setupImageGallery(totalImages, largeImageClass, smallImageClass) {
   // Initial image setup
   updateImages();
 }
-
+//All Services
 // Call the function with parameters
 setupImageGallery(19, '.large-image', '.small-image');
+
+
+function redirectToServices() {
+  window.location.href = 'ourservices.html';
+}
+
+if (window.innerWidth <= 430) {
+  document.getElementById('box4').addEventListener('click', redirectToServices);
+}
 
 /*==================== ANImaTION ====================*/
 

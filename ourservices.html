@@ -1,10 +1,124 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Services</title>
+    <title>Card with Overflowing Image</title>
+    <style>
+       * {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background: #ccc;
+  font-family: "Libre Franklin", sans-serif;
+  background-repeat: no-repeat;
+  background-color: #d2eaea;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#FFD2EAEA', endColorstr='#FFF7EEC3');
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjEuMCIgeDI9IjEuMCIgeTI9IjAuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2QyZWFlYSIvPjxzdG9wIG9mZnNldD0iNDklIiBzdG9wLWNvbG9yPSIjZjlmOWY5Ii8+PHN0b3Agb2Zmc2V0PSI0OSUiIHN0b3AtY29sb3I9IiNmOWY5ZjkiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmN2VlYzMiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 0% 100%, 100% 0%, color-stop(0%, #d2eaea), color-stop(49%, #f9f9f9), color-stop(49%, #f9f9f9), color-stop(100%, #f7eec3));
+  background-image: -moz-linear-gradient(left bottom, #d2eaea 0%, #f9f9f9 49%, #f9f9f9 49%, #f7eec3 100%);
+  background-image: -webkit-linear-gradient(left bottom, #d2eaea 0%, #f9f9f9 49%, #f9f9f9 49%, #f7eec3 100%);
+  background-image: linear-gradient(to right top, #d2eaea 0%, #f9f9f9 49%, #f9f9f9 49%, #f7eec3 100%);
+}
+
+div.container {
+  position: relative;
+  margin: 70px auto;
+  width: 70%;
+  height: 50vh;
+  text-align: center;
+  background: #fff;
+  -moz-box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1), 0px 60px 75px -25px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1), 0px 60px 75px -25px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1), 0px 60px 75px -25px rgba(0, 0, 0, 0.2);
+  cursor: default;
+}
+div.container img.img-fruit {
+  width:30%;
+  margin-top: -5%;
+}
+
+div.container h3 {
+  font-size: 30px;
+  letter-spacing: 3px;
+  margin-top: 35px;
+  color: #ea1d24;
+}
+div.container p {
+  font-size: 11px;
+  padding: 15px 45px;
+  color: #878787;
+  line-height: 22px;
+}
+
+div.container .ip-add-cart {
+  border: none;
+  padding: 12px 50px;
+  background: #f22d34;
+  color: #fff;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  border-radius: 25px;
+  -moz-box-shadow: 0px 15px 45px rgba(242, 45, 52, 0.5);
+  -webkit-box-shadow: 0px 15px 45px rgba(242, 45, 52, 0.5);
+  box-shadow: 0px 15px 45px rgba(242, 45, 52, 0.5);
+  cursor: pointer;
+  -moz-transition: background 0.3s ease-in;
+  -o-transition: background 0.3s ease-in;
+  -webkit-transition: background 0.3s ease-in;
+  transition: background 0.3s ease-in;
+}
+div.container .ip-add-cart:hover {
+  background: #da1920;
+}
+
+
+
+    </style>
 </head>
 <body>
+    <div class="container">
+        <img src="https://www.realestate.com.au/blog/images/5669x3779-fit,progressive/2019/09/09102153/8695_Tullamore_HOFFMAN_VILLA_37-Lonsdale-facade.jpg" alt="Strawberry" class="img-fruit" />
+      <h3>Residential Construction</h3>
+
+      <p>
+        From custom homes to renovations and additions, we turn your dream home into a reality
+    </p>
+      
+      <input class="ip-add-cart" type="button" value="Get a Quote" onclick="window.location.href='contact.html'"/>
+    </div>
+    <div class="container">
+        <img src="https://www.realestate.com.au/blog/images/5669x3779-fit,progressive/2019/09/09102153/8695_Tullamore_HOFFMAN_VILLA_37-Lonsdale-facade.jpg" alt="Strawberry" class="img-fruit" />
+      <h3>Commercial Construction</h3>
+
+      <p>
+        The garden strawberry is a widely grown hybrid species of the genus Fragaria. It is cultivated worldwide for its fruit.
+      </p>
+      
+      <input class="ip-add-cart" type="button" value="Get a Quote" />
+    </div>
+    <div class="container">
+        <img src="https://www.realestate.com.au/blog/images/5669x3779-fit,progressive/2019/09/09102153/8695_Tullamore_HOFFMAN_VILLA_37-Lonsdale-facade.jpg" alt="Strawberry" class="img-fruit" />
+      <h3>Project Management</h3>
+
+      <p>
+        The garden strawberry is a widely grown hybrid species of the genus Fragaria. It is cultivated worldwide for its fruit.
+      </p>
+      
+      <input class="ip-add-cart" type="button" value="Get a Quote" />
+    </div>
     
 </body>
 </html>
