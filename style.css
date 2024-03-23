@@ -785,7 +785,7 @@
   height: calc(100%); /* Adjust to include border widths */
   border-right: 20px solid var(--article-hover-border);
   border-bottom: 20px solid var(--article-hover-border);
-  border-bottom-right-radius: 120px; /* Match box's bottom-right radius */
+  border-bottom-right-radius: calc(var(--border-radius) +20px); /* Match box's bottom-right radius */
   pointer-events: none; /* Prevent hover from affecting underlying elements */
 }
 
