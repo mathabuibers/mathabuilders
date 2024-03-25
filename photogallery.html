@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 40px;
+            color: #B31F22;
+            font-family: sans-serif;
+            font-size: 2rem;
+            animation: moveText 2s infinite alternate;
+        }
+
+        .gallery {
+            padding: 10px;
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            grid-auto-rows: 250px;
+            grid-auto-flow: dense;
+
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.1);
+
+        }
+
+        /****** stretch vertically ******/
+        .v-stretch {
+            grid-row: span 2;
+        }
+
+        /****** stretch horizontally ******/
+        .h-stretch {
+            grid-column: span 2;
+        }
+
+        /****** stretch both ******/
+        .bigstretch {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .gallery div img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border: #fff 5px solid;
+        }
+
+        /**animation-text**/
+        @keyframes moveText {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(20px);
+            }
+        }
+
+        /***responsive***/
+        @media (max-width: 560px) {
+
+            /****** stretch vertically ******/
+            .v-stretch {
+                grid-row: span;
+            }
+
+            /****** stretch horizontally ******/
+            .h-stretch {
+                grid-column: span 1;
+            }
+
+            /****** stretch both ******/
+            .big-stretch {
+                grid-column: span 1;
+                grid-row: span 1;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Our Projects</h1>
+    <div class="gallery">
+        <div class="gallery-item"><img src="assets/img/img-1.jpg" alt="Image 1"></div>
+        <div class="gallery-item v-stretch"><img src="assets/img/img-2.jpg" alt="Image 2"></div>
+        <div class="gallery-item h-stretch"><img src="assets/img/img-3.jpg" alt="Image 3"></div>
+        <div class="gallery-item"><img src="assets/img/img-4.jpg" alt="Image 4"></div>
+        <div class="gallery-item big-stretch"><img src="assets/img/img-16.jpg" alt="Image 16"></div>
+        <div class="gallery-item v-stretch"><img src="assets/img/img-7.jpg" alt="Image 7"></div>
+        <div class="gallery-item big-stretch"><img src="assets/img/img-8.jpg" alt="Image 8"></div>
+        <div class="gallery-item"><img src="assets/img/img-11.jpg" alt="Image 11"></div>
+        <div class="gallery-item h-stretch"><img src="assets/img/img-5.jpg" alt="Image 5"></div>
+        <div class="gallery-item"><img src="assets/img/img-19.jpg" alt="Image 19"></div>
+        <div class="gallery-item v-stretch"><img src="assets/img/img-9.jpg" alt="Image 9"></div>
+        <div class="gallery-item"><img src="assets/img/img-10.jpg" alt="Image 10"></div>
+        <div class="gallery-item v-stretch"><img src="assets/img/img-17.jpg" alt="Image 17"></div>
+        <div class="gallery-item"><img src="assets/img/img-18.jpg" alt="Image 18"></div>
+        <div class="gallery-item big-stretch"><img src="assets/img/img-6.jpg" alt="Image 6"></div>
+        <div class="gallery-item h-stretch"><img src="assets/img/img-12.jpg" alt="Image 12"></div>
+        <div class="gallery-item"><img src="assets/img/img-13.jpg" alt="Image 13"></div>
+        <div class="gallery-item big-stretch"><img src="assets/img/img-14.jpg" alt="Image 14"></div>
+        <div class="gallery-item big-stretch"><img src="assets/img/img-15.jpg" alt="Image 15"></div>
+    </div>
+</body>
+
+</html>
