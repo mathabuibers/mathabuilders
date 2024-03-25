@@ -189,6 +189,21 @@ section {
   text-transform: capitalize;
   color: #2a2a2a;
 }
+/*
+---------------------------------------------
+Header Style
+--------------------------------------------- 
+*/
+
+header{
+  height: 10%;
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+}
+
+
+
 
 /* 
 ---------------------------------------------
@@ -199,7 +214,7 @@ About Page Style
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /* Ensure the container takes up the full viewport height */
+  min-height: 100vh;
   position: relative;
   background-image: url(https://static.vecteezy.com/system/resources/previews/000/116/304/original/free-construction-background-vector.jpg);
   background-attachment: fixed;
@@ -209,6 +224,13 @@ About Page Style
   padding: 130px 0px 200px 0px;
 }
 
+
+.container {
+  background:url(https://png.pngtree.com/thumb_back/fw800/background/20190222/ourmid/pngtree-construction-site-background-design-under-neon-skyline-backgroundcolorful-backgroundpainted-backgroundneon-image_60350.jpg);
+   background-color: rgba(255, 255, 255, 0.5); /* Transparent white background */
+   border-radius: 23px;
+   width:80%
+ }
 
 .blur-bg {
 	width: 100%;
@@ -220,7 +242,7 @@ About Page Style
 	left: 0;
 	top: 0;
 	z-index: 1;
- 
+  border-radius: 23px;
 
 }
 .about-main-content .content {
@@ -280,4 +302,11 @@ About Page Style
 .about-main-content .content .main-button a:hover {
   opacity: 0.9;
 }
-
+footer{
+  position: absolute;
+  
+}
+.footer img{
+  width: auto;
+  
+}
