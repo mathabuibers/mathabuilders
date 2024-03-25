@@ -7,80 +7,333 @@
     <title>Photo Gallery</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <style>
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        body {
-            background-color: #f0f0f0;
-            padding: 20px;
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 40px;
+            color: #B31F22;
+            font-family: sans-serif;
+            font-size: 2rem;
+            animation: moveText 2s infinite alternate;
         }
 
         .gallery {
+            padding: 10px;
+            max-width: 1100px;
+            margin: 0 auto;
             display: grid;
-            grid-template-columns: auto auto auto auto auto;
-            grid-auto-rows: minmax(100px, auto);
-            gap: 37px;
-            padding: 20px;
-            max-width: 100%;
-            overflow-x: hidden;
-        }
-
-        .gallery-item {
-            max-height: 400px;
-            overflow: hidden;
-            border-radius: 15px;
-        }
-
-        .gallery-item :hover {
-            border: 10px solid rgb(0, 0, 0);
-            z-index: 1;
+            grid-gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            grid-auto-rows: 250px;
+            grid-auto-flow: dense;
 
         }
 
-        .gallery-item img {
+        .gallery-item img:hover {
+            transform: scale(1.1);
+
+        }
+
+        /****** stretch vertically ******/
+        .v-stretch {
+            grid-row: span 2;
+        }
+
+        /****** stretch horizontally ******/
+        .h-stretch {
+            grid-column: span 2;
+        }
+
+        /****** stretch both ******/
+        .bigstretch {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .gallery div img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            border-radius: 5px;
-
+            border: #fff 5px solid;
         }
 
-        .img11 {
-            grid-column-end: span 2;
-            grid-row:1/3;
+        /**animation-text**/
+        @keyframes moveText {
+            0% {
+                transform: translateY(0);
+            }
+
+            100% {
+                transform: translateY(20px);
+            }
         }
-    </style>
+
+        /***responsive***/
+        @media (max-width: 560px) {
+
+            /****** stretch vertically ******/
+            .v-stretch {
+                grid-row: span;
+            }
+
+            /****** stretch horizontally ******/
+            .h-stretch {
+                grid-column: span 1;
+            }
+
+            /****** stretch both ******/
+            .big-stretch {
+                grid-column: span 1;
+                grid-row: span 1;
+            }
+
+
+        }
+        footer {
+    width: 100%;
+    background-color: var(--hero-background);
+    color: var(--footer-text);
+    font-family: var(--opensans-font);
+
+  }
+
+  @media screen and (max-width: 1600px) {
+
+
+ 
+
+    .contact-text-container {
+      top: 6vh;
+  }
+}
+
+  hr {
+
+    width: 100%;
+    height: 2px;
+    background-color: var(--text);
+    border: none;
+    position: relative;
+    top: 3px;
+  }
+
+  .footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20%;
+    width: 100%;
+    height: auto;
+    padding: 30px 0;
+    position: relative;
+    left: -10%;
+    
+    flex-wrap: wrap;
+  }
+.footer-list-container{
+  display: flex;
+  gap: 30%;
+  
+  justify-content: center;
+  width: auto;
+  
+  
+}
+  #copyright {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    gap: 50%;
+    font-weight: 700px;
+    flex-wrap: wrap-reverse;
+  }
+
+  #social-items {
+    margin: 16px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 8px;
+    height: 8px;
+
+  }
+
+  footer svg {
+    width: 20%;
+    height: 10%;
+    padding: 1.5em;
+  }
+
+ .footer-link {
+    font-family: var(--opensans-font);
+   
+    color: var(--footer-text);
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 26px;
+    letter-spacing: 0em;
+    text-align: left;
+    white-space: nowrap;
+
+
+  }
+.list1,.list2,.list3{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  height: auto;
+  padding: 0 20px;
+  position: relative;
+  left: 10%;
+  top: 10px;
+}
+  .footer-link:hover {
+    color: var(--active-nav-link);
+  }
+
+ 
+
+  .footer-link:hover {
+    color: var(--active-nav-link);
+  }
+
+  #bashers {
+    font-family: var(--opensans-font);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+  color: var(--footer-text);  
+  }
+  #copyrightsign {
+    font-family: var(--opensans-font);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    
+   
+  }
+  #copyrightsign a{
+    text-decoration: none;
+  }
+
+  .icons {
+    color: var(--text);
+  }
     </style>
 </head>
 
 <body>
-
+    <header>
+        <div class="hamburger-menu">
+          <input id="menu__toggle" type="checkbox" />
+          <label class="menu__btn" for="menu__toggle">
+            <span></span>
+           
+          </label>
+      
+          <ul class="menu__box">
+            <li><a class="menu__item" href="../index.html#home"">Home</a></li>
+            <li><a class="menu__item" href="../index.html#about-us">About us</a></li>
+            <li><a class="menu__item" href="../index.html#projects">Projects</a></li>
+            <li><a class="menu__item" href="../index.html#News">News</a></li>
+            <li><a class="menu__item" href="../index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        
+        <img src="./assets/svg/logo.svg" alt="Matha Builders Logo" class="logo" />
+          <nav class="navigation">
+            <a href="../index.html#home" class="active" tabindex="0">Home</a>
+            <a href="../index.html#about-us"  tabindex="0">About</a>
+            <a href="../index.html#projects"  tabindex="0">Projects</a>
+            <a href="../index.html#News" tabindex="0">News</a>
+            <a href="../index.html#contact" tabindex="0">Contact</a>
+          </nav>
+    
+      </header>
+    <h1>Our Projects</h1>
     <div class="gallery">
-
         <div class="gallery-item"><img src="assets/img/img-1.jpg" alt="Image 1"></div>
-        <div class="gallery-item"><img src="assets/img/img-2.jpg" alt="Image 2"></div>
-        <div class="gallery-item"><img src="assets/img/img-3.jpg" alt="Image 3"></div>
-        <div class="gallery-item img4"><img src="assets/img/img-4.jpg" alt="Image 4"></div>
-        <div class="gallery-item"><img src="assets/img/img-7.jpg" alt="Image 7"></div>
-        <div class="gallery-item img19"><img src="assets/img/img-19.jpg" alt="Image 19"></div>
+        <div class="gallery-item v-stretch"><img src="assets/img/img-2.jpg" alt="Image 2"></div>
+        <div class="gallery-item h-stretch"><img src="assets/img/img-3.jpg" alt="Image 3"></div>
+        <div class="gallery-item"><img src="assets/img/img-4.jpg" alt="Image 4"></div>
+        <div class="gallery-item big-stretch"><img src="assets/img/img-16.jpg" alt="Image 16"></div>
+        <div class="gallery-item v-stretch"><img src="assets/img/img-7.jpg" alt="Image 7"></div>
+        <div class="gallery-item big-stretch"><img src="assets/img/img-8.jpg" alt="Image 8"></div>
         <div class="gallery-item"><img src="assets/img/img-11.jpg" alt="Image 11"></div>
-        <div class="gallery-item"><img src="assets/img/img-5.jpg" alt="Image 5"></div>
-        <div class="gallery-item"><img src="assets/img/img-8.jpg" alt="Image 8"></div>
-        <div class="gallery-item"><img src="assets/img/img-9.jpg" alt="Image 9"></div>
+        <div class="gallery-item h-stretch"><img src="assets/img/img-5.jpg" alt="Image 5"></div>
+        <div class="gallery-item"><img src="assets/img/img-19.jpg" alt="Image 19"></div>
+        <div class="gallery-item v-stretch"><img src="assets/img/img-9.jpg" alt="Image 9"></div>
         <div class="gallery-item"><img src="assets/img/img-10.jpg" alt="Image 10"></div>
-        <div class="gallery-item img6"><img src="assets/img/img-6.jpg" alt="Image 6"></div>
-        <div class="gallery-item "><img src="assets/img/img-12.jpg" alt="Image 12"></div>
-        <div class="gallery-item"><img src="assets/img/img-13.jpg" alt="Image 13"></div>
-        <div class="gallery-item"><img src="assets/img/img-14.jpg" alt="Image 14"></div>
-        <div class="gallery-item"><img src="assets/img/img-15.jpg" alt="Image 15"></div>
-        <div class="gallery-item"><img src="assets/img/img-16.jpg" alt="Image 16"></div>
-        <div class="gallery-item"><img src="assets/img/img-17.jpg" alt="Image 17"></div>
+        <div class="gallery-item v-stretch"><img src="assets/img/img-17.jpg" alt="Image 17"></div>
         <div class="gallery-item"><img src="assets/img/img-18.jpg" alt="Image 18"></div>
-
+        <div class="gallery-item big-stretch"><img src="assets/img/img-6.jpg" alt="Image 6"></div>
+        <div class="gallery-item h-stretch"><img src="assets/img/img-12.jpg" alt="Image 12"></div>
+        <div class="gallery-item"><img src="assets/img/img-13.jpg" alt="Image 13"></div>
+        <div class="gallery-item big-stretch"><img src="assets/img/img-14.jpg" alt="Image 14"></div>
+        <div class="gallery-item big-stretch"><img src="assets/img/img-15.jpg" alt="Image 15"></div>
     </div>
+    <footer>
+        <div class="footer-container">
+          <img src="./assets/svg/footer-logo.svg" alt="">
+                <div class="footer-list-container">
+                  <div class="list1">
+                      <a href="#" class="footer-link hidden">About</a>
+                      <a href="#" class="footer-link hidden">Terms & Conditions</a>
+                      <a href="#" class="footer-link hidden">Privacy Policy</a>
+                      <a href="#" class="footer-link hidden">Career</a>
+                      <a href="#" class="footer-link hidden">Contact</a>
+                      <a href="#" class="footer-link hidden">Help</a>
+                  </div>
+                  <div class="list2">
+                    <p class="footer-link" style="justify-content: center;">
+                      <b>Address : </b><br> No 14 , Adithanar nagar 
+                       <br> Udaiyanpatti  
+                       KK Nagar, <br>
+                       Kumaramangalam , <br>
+                       Tamil Nadu - 620012 .</p>
+                       <a href="#" class ="footer-link hidden">Quick Links</a>
+                      <a href="#" class ="footer-link hidden">Newsletter</a>
+                      <a href="#" class ="footer-link hidden">Articles</a>
+                      
+                  </div>
+                  <div class="list3">
+                    
+                       
+                        <a href="https://maps.app.goo.gl/yFW1BWi6PC5phzFG9" class ="footer-link">Location</a>
+                      <a class="footer-link" href="tel:9952653148">+91 9952653148</a>
+                      <a class="footer-link" href="tel:9597028632">+91 9597028632</a>
+                      <a class="footer-link ">info@yourinfo.com</a>
+                  </div>
+                </div>
+            </div>
+        
+        <hr>
+        <div  id="copyright">
+            <p id="copyrightsign">&copy;2023 Matha Builders | Designed & Developed by:<a href="https://www.linkedin.com/company/byte-bash-technologies/" target="blank" id="bashers"> BYTE-BASH TECHNOLOGIES</a></p>
+            <div id="social-items">
+            <a href="#" title="Facebook"><i class="fa fa-facebook icons"></i></a>
+            <a href="#"><i class="fa fa-instagram icons"></i></a>
+            <a href="#"><i class="fa fa-linkedin icons"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter icons"></i></a>
+            <a href="#"><i class="fa fa-youtube icons"></i></a>
+          </div>  
+    
+        </div>
+    
+    </footer>
 </body>
 
 </html>
