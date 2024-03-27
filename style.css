@@ -86,7 +86,9 @@
     color: var(--active-nav-link);
   }
 
-
+  button{
+    border-radius: 5px;
+  }
   /* Hero Section Svg's */
 
   .svg-container {
@@ -117,7 +119,9 @@
     animation: rotateCrane 1s;
   }
 
-
+  .hide{
+    display: none;
+  }
 
   .svg-icon {
     position: absolute;
@@ -172,6 +176,7 @@
 
     padding: 1% 2%;
     margin: 0;
+    width: 150px;
     /* Remove margins */
     border: none;
     border-left: 5px solid var(--active-nav-link);
@@ -179,6 +184,8 @@
     z-index: 2;
 
   }
+  
+
 
   .quote-button:focus {
     outline: 2px solid var(--active-nav-link);
@@ -919,9 +926,6 @@
 
   @media screen and (max-width: 1600px) {
 
-
- 
-
     .contact-text-container {
       top: 6vh;
   }
@@ -1129,7 +1133,10 @@
   }
     
     
-    
+  .hide{
+    /*show on mobile*/
+    display: block;
+   } 
     header{
       
       
@@ -1214,9 +1221,7 @@
  
  
 }
-button{
-  border-radius: 5px;
-}
+
 .menu__item {
   display: block;
   padding: 12px 24px;
@@ -1257,6 +1262,7 @@ button{
   .quote-button{
     top: 65%;
     left: 72%;
+    width:auto;
   }
   .semicircle{
     height: 30%;
@@ -1281,9 +1287,9 @@ button{
   }
   .about-button{
     top: 50%;
-    left: 35%;
-    padding: 7.5px 20px;
-    font-size: 10px;
+    left: 30%;
+    padding: 8px 30px;
+    font-size: 12px;
   }
   .screen .horizontal-line::before{
     top: 27px;
@@ -1356,7 +1362,7 @@ button{
   background-color: var(--article-hover-border);
   border: none;
   outline: none;
-  color:#567EBB;
+  color:var(--text);
   font-size: 70px;
   transition: background-color 0.3s ease;
   padding: 0;
@@ -1396,7 +1402,7 @@ button{
     height: 500px;
   }
   #project-button {
-    top: -35vh;
+    top: -270px;
     width: 150px;
     height: 50px;
     font-size: 10px;

@@ -18,10 +18,10 @@ html {
 }
 
 body {
-  background: #fdba2a;
+  
   font-family: "Libre Franklin", sans-serif;
   background-repeat: no-repeat;
-  background-color: sandybrown;
+  background-color: var(--header-background);
   *zoom: 1;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#FFD2EAEA', endColorstr='#FFF7EEC3');
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjEuMCIgeDI9IjEuMCIgeTI9IjAuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2QyZWFlYSIvPjxzdG9wIG9mZnNldD0iNDklIiBzdG9wLWNvbG9yPSIjZjlmOWY5Ii8+PHN0b3Agb2Zmc2V0PSI0OSUiIHN0b3AtY29sb3I9IiNmOWY5ZjkiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmN2VlYzMiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
@@ -168,7 +168,7 @@ div.container .ip-add-cart:hover {
 /* Footer section*/
 footer {
     width: 100%;
-    background-color: var(--hero-background);
+    background-color: var(--header-background);
     color: var(--footer-text);
     font-family: var(--opensans-font);
 
@@ -420,8 +420,8 @@ footer {
     
     <hr>
     <div  id="copyright">
-        <p id="copyrightsign">&copy;2023 Matha Builders | Designed by:<a href="https://byte-bash-blitz.github.io/" target="blank" id="bashers">BASHERS</a></p>
-        <div id="social-items">
+      <p id="copyrightsign" class="hidden">&copy;2023 Matha Builders | Designed & Developed by:<a href="https://www.linkedin.com/company/byte-bash-technologies/" target="blank" id="bashers"> BYTE-BASH TECHNOLOGIES</a></p>
+      <p id="copyrightsign" class="hide">&copy;2023 Matha Builders | Designed by:<a href="https://www.linkedin.com/company/byte-bash-technologies/" target="blank" id="bashers"> BASHERS</a></p>
         <a href="#" title="Facebook"><i class="fa fa-facebook icons"></i></a>
         <a href="#"><i class="fa fa-instagram icons"></i></a>
         <a href="#"><i class="fa fa-linkedin icons"></i></a>
