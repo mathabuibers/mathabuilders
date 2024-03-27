@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Services</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/072d270ea1.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="./assets/svg/logo.svg" type="image/x-icon">
+
     <style>
        * {
   margin: 0;
@@ -47,6 +50,7 @@ div.container {
 div.container img.img-fruit {
   width:30%;
   margin-top: -5%;
+  height: 50%;
 }
 
 div.container h3 {
@@ -86,7 +90,7 @@ div.container .ip-add-cart:hover {
   background: #da1920;
 }
 .hero {
-    background-image: url('http://www.thebluebook.com/inc/img/qp/235306/our-services.jpg'); /* Replace 'hero-background.jpg' with your image URL */
+    background-image: url('https://edgeinformation.com/wp-content/uploads/2018/11/Edge-August-B2-1024x739.jpg'); /* Replace 'hero-background.jpg' with your image URL */
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -143,7 +147,7 @@ div.container .ip-add-cart:hover {
 }
 @media screen and (max-width: 450px) {
   div.container {
-    height: 35vh;
+    height: 39ch;
   }
   div.container h3 {
     font-size: 20px;
@@ -165,20 +169,8 @@ div.container .ip-add-cart:hover {
     transform: scale(1.1);
   }
 }
-/* Footer section*/
-footer {
-    width: 100%;
-    background-color: var(--header-background);
-    color: var(--footer-text);
-    font-family: var(--opensans-font);
-
-  }
 
   @media screen and (max-width: 1600px) {
-
-
- 
-
     .contact-text-container {
       top: 6vh;
   }
@@ -194,118 +186,11 @@ footer {
     top: 3px;
   }
 
-  .footer-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20%;
-    width: 100%;
-    height: auto;
-    padding: 30px 0;
-    position: relative;
-    left: -10%;
-    
-    flex-wrap: wrap;
-  }
-.footer-list-container{
-  display: flex;
-  gap: 30%;
   
-  justify-content: center;
-  width: auto;
-  
-  
-}
-  #copyright {
-    display: flex;
-    justify-content: center;
-    width: 90%;
-    gap: 50%;
-    font-weight: 700px;
-    flex-wrap: wrap-reverse;
-  }
-
-  #social-items {
-    margin: 16px 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    width: 8px;
-    height: 8px;
-
-  }
-
-  footer svg {
-    width: 20%;
-    height: 10%;
-    padding: 1.5em;
-  }
-
- .footer-link {
-    font-family: var(--opensans-font);
-   
-    color: var(--footer-text);
-    text-decoration: none;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 26px;
-    letter-spacing: 0em;
-    text-align: left;
-    white-space: nowrap;
-
-
-  }
-.list1,.list2,.list3{
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  width: 100%;
-  height: auto;
-  padding: 0 20px;
-  position: relative;
-  left: 10%;
-  top: 10px;
-}
-  .footer-link:hover {
-    color: var(--active-nav-link);
-  }
-
- 
-
-  .footer-link:hover {
-    color: var(--active-nav-link);
-  }
-
-  #bashers {
-    font-family: var(--opensans-font);
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 22px;
-    letter-spacing: 0em;
-    text-align: left;
-  color: var(--footer-text);  
-  }
-  #copyrightsign {
-    font-family: var(--opensans-font);
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 22px;
-    letter-spacing: 0em;
-    text-align: left;
-    
-   
-  }
-  #copyrightsign a{
-    text-decoration: none;
-  }
-
-  .icons {
-    color: var(--text);
-  }
     </style>
 </head>
 <body>
-  <header>
+  <header style="background-color: transparent; position:absolute; z-index: 2;" >
     <div class="hamburger-menu">
       <input id="menu__toggle" type="checkbox" />
       <label class="menu__btn" for="menu__toggle">
@@ -382,7 +267,6 @@ footer {
     
     <input class="ip-add-cart" onclick="window.location.href='./contact.html'"  type="button" value="Get a Quote" />
   </div>
-
   <footer>
     <div class="footer-container">
       <img src="./assets/svg/footer-logo.svg" alt="">
@@ -411,27 +295,28 @@ footer {
                 
                    
                     <a href="https://maps.app.goo.gl/yFW1BWi6PC5phzFG9" class ="footer-link">Location</a>
-                  <a class="footer-link">+91 9952653148</a>
-                  <a class="footer-link">+91 9597028632</a>
-                  <a class="footer-link ">info@yourinfo.com</a>
-              </div>
+                  <a class="footer-link" href="tel:9952653148">+91 9952653148</a>
+                  <a class="footer-link" href="tel:9597028632">+91 9597028632</a>
+                  <a class="footer-link " href="mailto:mathabuildersofficial@gmail.com">mathabuildersofficial@gmail.com</a>
+                </div>
             </div>
         </div>
     
     <hr>
     <div  id="copyright">
-      <p id="copyrightsign" class="hidden">&copy;2023 Matha Builders | Designed & Developed by:<a href="https://www.linkedin.com/company/byte-bash-technologies/" target="blank" id="bashers"> BYTE-BASH TECHNOLOGIES</a></p>
-      <p id="copyrightsign" class="hide">&copy;2023 Matha Builders | Designed by:<a href="https://www.linkedin.com/company/byte-bash-technologies/" target="blank" id="bashers"> BASHERS</a></p>
+      <p id="copyrightsign" >&copy;2023 Matha Builders | Designed & Developed by <a href="https://www.linkedin.com/company/byte-bash-technologies/" target="blank" id="bashers"><br> BYTE BASH TECHNOLOGIES</a></p>
+        
+      <div id="social-items">
         <a href="#" title="Facebook"><i class="fa fa-facebook icons"></i></a>
         <a href="#"><i class="fa fa-instagram icons"></i></a>
         <a href="#"><i class="fa fa-linkedin icons"></i></a>
         <a href="#"><i class="fa-brands fa-x-twitter icons"></i></a>
         <a href="#"><i class="fa fa-youtube icons"></i></a>
-      </div>  
-
+      </div> 
+  
     </div>
-
-</footer>
+  
+  </footer>
 
   <script>// Parallax effect
     window.addEventListener('scroll', function() {
