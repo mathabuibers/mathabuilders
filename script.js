@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 //phone
 
-// timer for the testimonial contents
+// Timer for the testimonial contents
 const ids = ['slide1', 'slide2', 'slide3'];
 let i = 0;
 let intervalId;
@@ -164,7 +164,13 @@ function startSlideshowForMobile() {
 }
 
 // Call the function to start the slideshow for mobile devices when the page is loaded
-window.onload = startSlideshowForMobile;
+startSlideshowForMobile();
+
+// Add event listener for viewport resize
+window.addEventListener('resize', function() {
+    // Call the function to start the slideshow for mobile devices when the viewport is resized
+    startSlideshowForMobile();
+});
 
 
 // Hamburger menu
