@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Services</title>
+    <link rel="stylesheet" href="style.css">
     <style>
        * {
   margin: 0;
@@ -13,13 +14,14 @@
 
 html {
   height: 100%;
+  overflow-x: hidden;
 }
 
 body {
-  background: #fdba2a;
+  
   font-family: "Libre Franklin", sans-serif;
   background-repeat: no-repeat;
-  background-color: sandybrown;
+  background-color: var(--header-background);
   *zoom: 1;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#FFD2EAEA', endColorstr='#FFF7EEC3');
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjEuMCIgeDI9IjEuMCIgeTI9IjAuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2QyZWFlYSIvPjxzdG9wIG9mZnNldD0iNDklIiBzdG9wLWNvbG9yPSIjZjlmOWY5Ii8+PHN0b3Agb2Zmc2V0PSI0OSUiIHN0b3AtY29sb3I9IiNmOWY5ZjkiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmN2VlYzMiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
@@ -84,7 +86,7 @@ div.container .ip-add-cart:hover {
   background: #da1920;
 }
 .hero {
-    background-image: url('https://th.bing.com/th/id/R.8d0146da85b34dda9013cd8adb9591ae?rik=Ox5c6tAYQsgp1Q&riu=http%3a%2f%2fwww.thebluebook.com%2finc%2fimg%2fqp%2f235306%2four-services.jpg&ehk=ZZKbj%2fjNXZikjl3lDcxMu5Iz%2fl1aVeZVThee9mafMtU%3d&risl=&pid=ImgRaw&r=0'); /* Replace 'hero-background.jpg' with your image URL */
+    background-image: url('http://www.thebluebook.com/inc/img/qp/235306/our-services.jpg'); /* Replace 'hero-background.jpg' with your image URL */
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -166,7 +168,7 @@ div.container .ip-add-cart:hover {
 /* Footer section*/
 footer {
     width: 100%;
-    background-color: var(--hero-background);
+    background-color: var(--header-background);
     color: var(--footer-text);
     font-family: var(--opensans-font);
 
@@ -303,6 +305,34 @@ footer {
     </style>
 </head>
 <body>
+  <header>
+    <div class="hamburger-menu">
+      <input id="menu__toggle" type="checkbox" />
+      <label class="menu__btn" for="menu__toggle">
+        <span></span>
+       
+      </label>
+  
+      <ul class="menu__box">
+        <li><a class="menu__item" href="../index.html#home"">Home</a></li>
+        <li><a class="menu__item" href="../index.html#about-us">About us</a></li>
+        <li><a class="menu__item" href="../index.html#projects">Projects</a></li>
+        <li><a class="menu__item" href="../index.html#News">News</a></li>
+        <li><a class="menu__item" href="../index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+    
+    <img src="./assets/svg/logo.svg" alt="Matha Builders Logo" class="logo" />
+      <nav class="navigation">
+       
+        <a href="../index.html#home" class="active" tabindex="0">Home</a>
+        <a href="../index.html#about-us"  tabindex="0">About</a>
+        <a href="../index.html#projects"  tabindex="0">Projects</a>
+        <a href="../index.html#News" tabindex="0">News</a>
+        <a href="../index.html#contact" tabindex="0">Contact</a>
+      </nav>
+
+  </header>
     <div class="hero">
       <div class="hero-content">
           <h1>Our Services</h1>
@@ -390,8 +420,8 @@ footer {
     
     <hr>
     <div  id="copyright">
-        <p id="copyrightsign">&copy;2023 Matha Builders | Designed by:<a href="https://byte-bash-blitz.github.io/" target="blank" id="bashers">BASHERS</a></p>
-        <div id="social-items">
+      <p id="copyrightsign" class="hidden">&copy;2023 Matha Builders | Designed & Developed by:<a href="https://www.linkedin.com/company/byte-bash-technologies/" target="blank" id="bashers"> BYTE-BASH TECHNOLOGIES</a></p>
+      <p id="copyrightsign" class="hide">&copy;2023 Matha Builders | Designed by:<a href="https://www.linkedin.com/company/byte-bash-technologies/" target="blank" id="bashers"> BASHERS</a></p>
         <a href="#" title="Facebook"><i class="fa fa-facebook icons"></i></a>
         <a href="#"><i class="fa fa-instagram icons"></i></a>
         <a href="#"><i class="fa fa-linkedin icons"></i></a>
