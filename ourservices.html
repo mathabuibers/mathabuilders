@@ -22,7 +22,7 @@ body {
   font-family: "Libre Franklin", sans-serif;
   background-repeat: no-repeat;
   background-color: var(--header-background);
-  *zoom: 1;
+
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#FFD2EAEA', endColorstr='#FFF7EEC3');
   background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjEuMCIgeDI9IjEuMCIgeTI9IjAuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2QyZWFlYSIvPjxzdG9wIG9mZnNldD0iNDklIiBzdG9wLWNvbG9yPSIjZjlmOWY5Ii8+PHN0b3Agb2Zmc2V0PSI0OSUiIHN0b3AtY29sb3I9IiNmOWY5ZjkiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmN2VlYzMiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
   background-size: 100%;
@@ -322,7 +322,7 @@ footer {
       </ul>
     </div>
     
-    <img src="./assets/svg/logo.svg" alt="Matha Builders Logo" class="logo" />
+    <img src="./assets/svg/logo.svg" onclick="window.location.href='./index.html'" alt="Matha Builders Logo" class="logo" />
       <nav class="navigation">
        
         <a href="../index.html#home" class="active" tabindex="0">Home</a>
@@ -337,19 +337,19 @@ footer {
       <div class="hero-content">
           <h1>Our Services</h1>
           <p>Discover our wide range of construction services</p>
-          <a href="#services" class="btn">Explore</a>
+          <a href="./ourservices.html#explore-services" class="btn">Explore</a>
       </div>
     </div>
 
     <div class="container" id="residential-construction" >
         <img src="https://www.realestate.com.au/blog/images/5669x3779-fit,progressive/2019/09/09102153/8695_Tullamore_HOFFMAN_VILLA_37-Lonsdale-facade.jpg" alt="Strawberry" class="img-fruit" />
-      <h3>Residential Construction</h3>
+      <h3 id="explore-services">Residential Construction</h3>
 
       <p>
         From custom homes to renovations and additions, we turn your dream home into a reality
     </p>
       
-      <input class="ip-add-cart" type="button" value="Get a Quote" onclick="window.location.href='contact.html'"/>
+      <input class="ip-add-cart" type="button" value="Get a Quote" onclick="window.location.href='./contact.html'"/>
     </div>
     <div class="container" id="commercial-construction">
         <img src="https://s3-us-west-1.amazonaws.com/acropolis-wp-content-uploads/commercial-construction-hero-image.jpg" alt="Strawberry" class="img-fruit" />
@@ -359,7 +359,7 @@ footer {
         We are specialized in commercial builds, including offices, retail spaces, and hospitality establishments
       </p>
       
-      <input class="ip-add-cart" type="button" value="Get a Quote" />
+      <input class="ip-add-cart" onclick="window.location.href='./contact.html'" type="button" value="Get a Quote" />
     </div>
     <div class="container">
         <img src="https://th.bing.com/th/id/OIP.DtMLdc3rpacTVY5z_7_bCgHaE7?rs=1&pid=ImgDetMain" alt="Strawberry" class="img-fruit" />
@@ -369,7 +369,7 @@ footer {
         We handle the complexities of project management, ensuring seamless coordination and efficient execution 
       </p>
       
-      <input class="ip-add-cart" type="button" value="Get a Quote" />
+      <input class="ip-add-cart" onclick="window.location.href='./contact.html'"   type="button" value="Get a Quote" />
     </div>
     
     <div class="container">
@@ -380,7 +380,7 @@ footer {
       Benefit from our integrated design-build approach, streamlining the construction process and  cost-effective solutions.
     </p>
     
-    <input class="ip-add-cart" type="button" value="Get a Quote" />
+    <input class="ip-add-cart" onclick="window.location.href='./contact.html'"  type="button" value="Get a Quote" />
   </div>
 
   <footer>

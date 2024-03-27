@@ -1126,7 +1126,7 @@
   }
 
 
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 769px), screen and (max-height: 450px){
     
     :root{
     --box-radius: 50px;
@@ -1521,3 +1521,16 @@
   }
 }
 
+@media screen and (max-width:769){
+
+  .svg-container{
+    height: 60vh;
+  }
+  .crane{
+    top: -1vh;
+  }
+  .hero-logo{
+    top: 30%;
+    width: 80%;
+  }
+}
